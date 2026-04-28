@@ -625,7 +625,27 @@ function TickerRow({
 }
 
 function TickerDetail({ stat, signals }: { stat: TickerStat; signals: SignalEvent[] }) {
-  const sortedSignals = [...signals].sort((a, b) => a.signalDateTime.localeCompare(b.signalDateTime));
+  const sortedSignals = useMemo(() => [...signals].sort((a, b) => a.signalDateTime.localeCompare(b.signalDateTime)), [signals]);
+  const signalGroups = useMemo(() => groupSignalEventsByDate(sortedSignals), [sortedSignals]);
+  const latestDate = signalGroups[0]?.date || "";
+  const [openDates, setOpenDates] = useState<Set<string>>(() => new Set(latestDate ? [latestDate] : []));
+
+  useEffect(() => {
+    setOpenDates(new Set(latestDate ? [latestDate] : []));
+  }, [latestDate, stat.ticker]);
+
+  const toggleDate = (date: string) => {
+    setOpenDates((current) => {
+      const next = new Set(current);
+      if (next.has(date)) {
+        next.delete(date);
+      } else {
+        next.add(date);
+      }
+      return next;
+    });
+  };
+
   return (
     <div className="ticker-detail">
       <div className="detail-head">
@@ -652,34 +672,101 @@ function TickerDetail({ stat, signals }: { stat: TickerStat; signals: SignalEven
         ))}
       </div>
       <div className="event-stack">
-        {sortedSignals.slice(0, 12).map((signal) => (
-          <article className="event-card" key={`${signal.duplicateKey}-${signal.id}`}>
-            <div className="event-time">
-              <strong>{signal.signalTime}</strong>
-              <small>{signal.session}</small>
-            </div>
-            <div className="event-body">
-              <div>
-                <strong>{signal.signalName}</strong>
-                <span>{formatEventPrice(signal)}</span>
+        {signalGroups.map((group) => (
+          <section className="signal-day-group" key={group.date}>
+            <button className="signal-day-toggle" type="button" onClick={() => toggleDate(group.date)} aria-expanded={openDates.has(group.date)}>
+              <span>
+                <strong>{formatTradeDate(group.date)}</strong>
+                <small>
+                  {group.signals.length} signal · {group.rawCount} raw · {group.firstTime}-{group.lastTime}
+                </small>
+              </span>
+              <ChevronDown className={openDates.has(group.date) ? "chevron-open" : ""} size={17} />
+            </button>
+            {openDates.has(group.date) ? (
+              <div className="signal-day-events">
+                {group.signals.map((signal) => (
+                  <SignalEventCard signal={signal} key={`${signal.duplicateKey}-${signal.id}`} />
+                ))}
               </div>
-              <p>
-                +{signal.score} · Total {signal.total.toFixed(1)}
-                {signal.duplicateCount > 1 ? ` · ${signal.duplicateCount}x raw` : ""}
-              </p>
-              {signal.tags.length > 0 && (
-                <div className="mini-tags">
-                  {signal.tags.slice(0, 4).map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-              )}
-            </div>
-          </article>
+            ) : null}
+          </section>
         ))}
       </div>
     </div>
   );
+}
+
+function SignalEventCard({ signal }: { signal: SignalEvent }) {
+  return (
+    <article className="event-card">
+      <div className="event-time">
+        <strong>{signal.signalTime}</strong>
+        <small>{signal.session}</small>
+      </div>
+      <div className="event-body">
+        <div>
+          <strong>{signal.signalName}</strong>
+          <span>{formatEventPrice(signal)}</span>
+        </div>
+        <p>
+          +{signal.score} · Total {signal.total.toFixed(1)}
+          {signal.duplicateCount > 1 ? ` · ${signal.duplicateCount}x raw` : ""}
+        </p>
+        {signal.tags.length > 0 ? (
+          <div className="mini-tags">
+            {signal.tags.slice(0, 4).map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
+interface SignalEventDateGroup {
+  date: string;
+  signals: SignalEvent[];
+  rawCount: number;
+  firstTime: string;
+  lastTime: string;
+}
+
+const tradeDateFormatter = new Intl.DateTimeFormat("id-ID", {
+  weekday: "long",
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+});
+
+function groupSignalEventsByDate(signals: SignalEvent[]): SignalEventDateGroup[] {
+  const groups = new Map<string, SignalEvent[]>();
+  signals.forEach((signal) => {
+    const list = groups.get(signal.tradeDate) || [];
+    list.push(signal);
+    groups.set(signal.tradeDate, list);
+  });
+
+  return Array.from(groups.entries())
+    .sort(([dateA], [dateB]) => dateB.localeCompare(dateA))
+    .map(([date, dateSignals]) => {
+      const sorted = [...dateSignals].sort((a, b) => a.signalDateTime.localeCompare(b.signalDateTime));
+      return {
+        date,
+        signals: sorted,
+        rawCount: sorted.reduce((total, signal) => total + signal.duplicateCount, 0),
+        firstTime: sorted[0]?.signalTime || "-",
+        lastTime: sorted.at(-1)?.signalTime || "-",
+      };
+    });
+}
+
+function formatTradeDate(value: string): string {
+  const [year, month, day] = value.split("-").map(Number);
+  if (!year || !month || !day) return value || "-";
+
+  return tradeDateFormatter.format(new Date(year, month - 1, day));
 }
 
 function PriceTrendChart({ stat, signals }: { stat: TickerStat; signals: SignalEvent[] }) {
