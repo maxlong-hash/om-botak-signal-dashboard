@@ -882,32 +882,40 @@ button {
 .time-chart {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(28px, 1fr);
-  align-items: end;
+  grid-auto-columns: minmax(34px, 1fr);
+  align-items: stretch;
   gap: 8px;
-  min-height: 250px;
+  min-height: 286px;
   overflow-x: auto;
-  padding: 12px 0 2px;
+  padding: 12px 0 8px;
 }
 
 .time-bar {
   display: grid;
-  grid-template-rows: 1fr 22px;
-  align-items: end;
-  min-width: 28px;
-  height: 248px;
+  grid-template-rows: minmax(0, 214px) 48px;
+  align-items: stretch;
+  min-width: 34px;
+  height: 266px;
 }
 
 .time-bar span {
   display: block;
+  align-self: end;
   width: 100%;
   border-radius: 8px 8px 2px 2px;
   background: linear-gradient(180deg, var(--lime), var(--amber) 58%, var(--rose));
 }
 
 .time-bar small {
+  display: grid;
+  place-items: center;
+  align-self: start;
+  height: 46px;
+  padding-top: 8px;
+  overflow: visible;
   color: var(--muted);
   font-size: 0.66rem;
+  line-height: 1;
   text-align: center;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
