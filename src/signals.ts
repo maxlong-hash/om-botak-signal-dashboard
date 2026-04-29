@@ -394,19 +394,20 @@ export function buildSignalEdges(
 
   return Array.from(samplesBySignal.entries())
     .map(([signalName, samples]) => {
-      const sampleCount = samples.length;
+      const tickerSamples = collapseSamplesByTicker(samples);
+      const sampleCount = tickerSamples.length;
       const rawCount = sum(samples.map((sample) => sample.signal.duplicateCount));
-      const moveCount = samples.filter((sample) => sample.absMovePct >= movementThresholdPct).length;
-      const upCount = samples.filter((sample) => sample.maxRunupPct >= movementThresholdPct).length;
-      const downCount = samples.filter((sample) => sample.maxDrawdownPct <= -movementThresholdPct).length;
-      const best = samples.reduce((top, sample) => (sample.maxRunupPct > top.maxRunupPct ? sample : top), samples[0]);
+      const moveCount = tickerSamples.filter((sample) => sample.absMovePct >= movementThresholdPct).length;
+      const upCount = tickerSamples.filter((sample) => sample.maxRunupPct >= movementThresholdPct).length;
+      const downCount = tickerSamples.filter((sample) => sample.maxDrawdownPct <= -movementThresholdPct).length;
+      const best = tickerSamples.reduce((top, sample) => (sample.maxRunupPct > top.maxRunupPct ? sample : top), tickerSamples[0]);
       const moveRate = (moveCount / sampleCount) * 100;
       const upRate = (upCount / sampleCount) * 100;
       const downRate = (downCount / sampleCount) * 100;
-      const avgForwardReturnPct = average(samples.map((sample) => sample.finalReturnPct));
-      const avgMaxRunupPct = average(samples.map((sample) => sample.maxRunupPct));
-      const avgMaxDrawdownPct = average(samples.map((sample) => sample.maxDrawdownPct));
-      const avgAbsMovePct = average(samples.map((sample) => sample.absMovePct));
+      const avgForwardReturnPct = average(tickerSamples.map((sample) => sample.finalReturnPct));
+      const avgMaxRunupPct = average(tickerSamples.map((sample) => sample.maxRunupPct));
+      const avgMaxDrawdownPct = average(tickerSamples.map((sample) => sample.maxDrawdownPct));
+      const avgAbsMovePct = average(tickerSamples.map((sample) => sample.absMovePct));
       const sampleWeight = Math.min(1, Math.log(sampleCount + 1) / Math.log(28));
       const edgeScore =
         moveRate * 0.34 +
@@ -419,7 +420,7 @@ export function buildSignalEdges(
 
       return {
         signalName,
-        category: samples[0].signal.category,
+        category: tickerSamples[0].signal.category,
         sampleCount,
         rawCount,
         moveRate,
@@ -432,10 +433,23 @@ export function buildSignalEdges(
         bestTicker: best.signal.ticker,
         bestMovePct: best.maxRunupPct,
         edgeScore,
-        samples: [...samples].sort((a, b) => b.absMovePct - a.absMovePct || a.signal.signalDateTime.localeCompare(b.signal.signalDateTime)),
+        samples: tickerSamples.sort((a, b) => b.absMovePct - a.absMovePct || a.signal.signalDateTime.localeCompare(b.signal.signalDateTime)),
       };
     })
     .sort((a, b) => b.edgeScore - a.edgeScore || b.sampleCount - a.sampleCount || a.signalName.localeCompare(b.signalName));
+}
+
+function collapseSamplesByTicker(samples: SignalEdgeSample[]): SignalEdgeSample[] {
+  const byTicker = new Map<string, SignalEdgeSample>();
+  [...samples]
+    .sort((a, b) => compareSignals(a.signal, b.signal))
+    .forEach((sample) => {
+      if (!byTicker.has(sample.signal.ticker)) {
+        byTicker.set(sample.signal.ticker, sample);
+      }
+    });
+
+  return Array.from(byTicker.values());
 }
 
 export function getMessageText(message: TelegramMessage): string {

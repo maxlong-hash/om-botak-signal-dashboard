@@ -398,7 +398,7 @@ export default function App() {
                   value={edgeSortMode}
                   options={[
                     { value: "edge", label: "Edge terbaik" },
-                    { value: "samples", label: "Sample terbanyak" },
+                    { value: "samples", label: "Saham terbanyak" },
                     { value: "move", label: "Move rate" },
                     { value: "up", label: "Follow-up naik" },
                     { value: "return", label: "Avg return" },
@@ -408,7 +408,7 @@ export default function App() {
                   onChange={(value) => setEdgeSortMode(value as EdgeSortMode)}
                 />
                 <label className="threshold-control">
-                  Min sample
+                  Min saham
                   <input
                     type="number"
                     min="1"
@@ -891,7 +891,7 @@ function SignalEdgePanel({
             <div>
               <strong>{edge.signalName}</strong>
               <small>
-                {edge.sampleCount} sample - {edge.category}
+                {edge.sampleCount} saham - {edge.category}
               </small>
             </div>
             <b>{edge.moveRate.toFixed(0)}%</b>
@@ -906,7 +906,7 @@ function SignalEdgePanel({
           <thead>
             <tr>
               <th>Signal</th>
-              <th>Sample</th>
+              <th>Saham</th>
               <th>Move Rate</th>
               <th>Naik</th>
               <th>Turun</th>
@@ -974,7 +974,7 @@ function EdgeSamplesPopout({
       <section className="popout-card edge-popout-card" role="dialog" aria-modal="true" aria-label={`${edge.signalName} samples`}>
         <div className="popout-head">
           <div>
-            <span className="detail-label">Sample Signal</span>
+            <span className="detail-label">Sample per Saham</span>
             <h2>{edge.signalName}</h2>
           </div>
           <button className="icon-button" onClick={onClose} aria-label="Tutup sample signal" title="Tutup">
@@ -983,24 +983,24 @@ function EdgeSamplesPopout({
         </div>
         <div className="sample-kpis">
           <div>
-            <span>Total sample</span>
+            <span>Total saham</span>
             <strong>{edge.sampleCount}</strong>
             <small>{edge.category}</small>
           </div>
           <div>
             <span>Move rate</span>
             <strong>{edge.moveRate.toFixed(0)}%</strong>
-            <small>{movedSamples} bergerak &gt;= {threshold}%</small>
+            <small>{movedSamples} saham bergerak &gt;= {threshold}%</small>
           </div>
           <div>
             <span>Follow-up naik</span>
             <strong className="positive">{edge.upRate.toFixed(0)}%</strong>
-            <small>{upSamples} sample naik</small>
+            <small>{upSamples} saham naik</small>
           </div>
           <div>
             <span>Drawdown</span>
             <strong className="negative">{edge.downRate.toFixed(0)}%</strong>
-            <small>{downSamples} sample turun</small>
+            <small>{downSamples} saham turun</small>
           </div>
         </div>
         <SampleTable samples={edge.samples} threshold={threshold} onPickTicker={onPickTicker} />
@@ -1104,19 +1104,19 @@ function GuidePopout({ onClose }: { onClose: () => void }) {
           <GuideBlock
             title="Signal Edge Analyzer"
             items={[
-              ["Sample", "Jumlah kejadian signal yang punya harga entry dan masih punya harga lanjutan pada ticker yang sama setelah signal itu muncul."],
+              ["Sample", "Jumlah saham unik yang punya harga entry dan masih punya harga lanjutan pada ticker yang sama setelah signal itu muncul."],
               ["Gerak >=", "Ambang minimum agar pergerakan dianggap signifikan. Default 2 berarti minimal 2%."],
-              ["Move rate", "Persentase sample yang setelah signal keluar sempat bergerak naik atau turun minimal sebesar ambang."],
+              ["Move rate", "Persentase saham sample yang setelah signal keluar sempat bergerak naik atau turun minimal sebesar ambang."],
               ["Universe follow-up", "Entry signal mengikuti filter aktif, tetapi harga lanjutan memakai semua price snapshot dalam rentang tanggal agar tidak bias oleh filter kategori/search."],
-              ["Naik", "Persentase sample yang setelah signal keluar sempat naik minimal sebesar ambang. Angka ini bisa overlap dengan Turun jika sample volatil dua arah."],
-              ["Turun", "Persentase sample yang setelah signal keluar sempat turun minimal sebesar ambang. Angka ini bisa overlap dengan Naik jika sample volatil dua arah."],
+              ["Naik", "Persentase saham sample yang setelah signal keluar sempat naik minimal sebesar ambang. Angka ini bisa overlap dengan Turun jika sample volatil dua arah."],
+              ["Turun", "Persentase saham sample yang setelah signal keluar sempat turun minimal sebesar ambang. Angka ini bisa overlap dengan Naik jika sample volatil dua arah."],
             ]}
           />
           <GuideBlock
             title="Sort Edge Analyzer"
             items={[
-              ["Edge terbaik", "Ranking gabungan dari move rate, follow-up naik, avg return, avg run-up, dan bobot sample."],
-              ["Sample terbanyak", "Urutan signal berdasarkan jumlah sample terbesar. Cocok untuk mencari data yang lebih tebal."],
+              ["Edge terbaik", "Ranking gabungan dari move rate, follow-up naik, avg return, avg run-up, dan bobot saham sample."],
+              ["Saham terbanyak", "Urutan signal berdasarkan jumlah saham sample terbesar. Cocok untuk mencari data yang lebih tebal."],
               ["Move rate", "Urutan signal yang paling sering membuat harga bergerak minimal sebesar ambang, tanpa melihat arah naik atau turun."],
               ["Follow-up naik", "Urutan signal yang paling sering diikuti kenaikan minimal sebesar ambang."],
               ["Avg return", "Rata-rata return dari harga entry signal ke harga latest berikutnya pada ticker yang sama."],
@@ -1127,13 +1127,13 @@ function GuidePopout({ onClose }: { onClose: () => void }) {
           <GuideBlock
             title="Sample Pop-out"
             items={[
-              ["Cara buka", "Klik angka Sample atau card top edge untuk melihat daftar saham pembentuk statistik signal itu."],
-              ["Entry", "Harga ketika signal tersebut muncul pada ticker itu."],
+              ["Cara buka", "Klik angka Saham atau card top edge untuk melihat daftar saham pembentuk statistik signal itu."],
+              ["Entry", "Harga ketika signal tersebut pertama kali muncul pada ticker itu dalam filter."],
               ["Latest", "Harga signal terakhir berikutnya pada ticker yang sama setelah entry signal."],
               ["Return", "Perubahan dari Entry ke Latest."],
               ["Run-up", "Kenaikan terbaik yang sempat terjadi setelah entry signal."],
               ["Drawdown", "Penurunan terdalam yang sempat terjadi setelah entry signal."],
-              ["Status Volatil", "Artinya satu sample pernah menyentuh ambang naik dan ambang turun, sehingga peluang gerak ada tetapi risikonya juga besar."],
+              ["Status Volatil", "Artinya satu saham sample pernah menyentuh ambang naik dan ambang turun, sehingga peluang gerak ada tetapi risikonya juga besar."],
             ]}
           />
           <GuideBlock
@@ -1149,10 +1149,10 @@ function GuidePopout({ onClose }: { onClose: () => void }) {
           <GuideBlock
             title="Cara Pakai Praktis"
             items={[
-              ["Langkah 1", "Set Min sample minimal 10 atau 20 agar signal dengan data terlalu sedikit tidak mendominasi."],
+              ["Langkah 1", "Set Min saham minimal 10 atau 20 agar signal dengan data terlalu sedikit tidak mendominasi."],
               ["Langkah 2", "Sort Edge terbaik, lalu cek Naik dan Turun. Signal bagus biasanya Naik tinggi dan Turun terkendali."],
-              ["Langkah 3", "Klik angka Sample untuk melihat saham apa saja yang membentuk statistik signal tersebut."],
-              ["Langkah 4", "Klik ticker dari sample untuk membuka card saham dan melihat urutan signal serta grafik harganya."],
+              ["Langkah 3", "Klik angka Saham untuk melihat saham apa saja yang membentuk statistik signal tersebut."],
+              ["Langkah 4", "Klik ticker dari tabel sample untuk membuka card saham dan melihat urutan signal serta grafik harganya."],
               ["Batasan", "Ini analisa historis dari signal snapshot. Bukan jaminan signal berikutnya pasti bergerak sama."],
             ]}
           />
