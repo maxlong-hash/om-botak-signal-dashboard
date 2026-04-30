@@ -71,6 +71,7 @@ export default function App() {
   const [detailOpen, setDetailOpen] = useState(false);
   const [selectedEdgeName, setSelectedEdgeName] = useState("");
   const [guideOpen, setGuideOpen] = useState(false);
+  const [tipsOpen, setTipsOpen] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -182,13 +183,14 @@ export default function App() {
   const avgSignalsPerTicker = tickerStats.length ? filteredSignals.length / tickerStats.length : 0;
 
   useEffect(() => {
-    const hasModal = detailOpen || Boolean(selectedEdgeName) || guideOpen;
+    const hasModal = detailOpen || Boolean(selectedEdgeName) || guideOpen || tipsOpen;
     if (!hasModal) return;
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
       setDetailOpen(false);
       setSelectedEdgeName("");
       setGuideOpen(false);
+      setTipsOpen(false);
     };
     document.body.classList.add("modal-open");
     window.addEventListener("keydown", onKeyDown);
@@ -196,7 +198,7 @@ export default function App() {
       document.body.classList.remove("modal-open");
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [detailOpen, selectedEdgeName, guideOpen]);
+  }, [detailOpen, selectedEdgeName, guideOpen, tipsOpen]);
 
   function pickTicker(ticker: string, openCard = true) {
     setSelectedTicker(ticker);
@@ -282,6 +284,10 @@ export default function App() {
           <button className="secondary-button" onClick={() => setGuideOpen(true)}>
             <BookOpen size={17} />
             Guide
+          </button>
+          <button className="secondary-button" onClick={() => setTipsOpen(true)}>
+            <Sparkles size={17} />
+            Tips Penggunaan
           </button>
           <button className="primary-button" onClick={exportCsv}>
             <Download size={17} />
@@ -477,6 +483,7 @@ export default function App() {
         />
       ) : null}
       {guideOpen ? <GuidePopout onClose={() => setGuideOpen(false)} /> : null}
+      {tipsOpen ? <TipsUsagePopout onClose={() => setTipsOpen(false)} /> : null}
     </main>
   );
 }
@@ -1154,6 +1161,135 @@ function GuidePopout({ onClose }: { onClose: () => void }) {
               ["Langkah 3", "Klik angka Saham untuk melihat saham apa saja yang membentuk statistik signal tersebut."],
               ["Langkah 4", "Klik ticker dari tabel sample untuk membuka card saham dan melihat urutan signal serta grafik harganya."],
               ["Batasan", "Ini analisa historis dari signal snapshot. Bukan jaminan signal berikutnya pasti bergerak sama."],
+            ]}
+          />
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function TipsUsagePopout({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="popout-backdrop" onMouseDown={(event) => event.currentTarget === event.target && onClose()}>
+      <section className="popout-card guide-popout-card" role="dialog" aria-modal="true" aria-label="Tips penggunaan signal">
+        <div className="popout-head">
+          <div>
+            <span className="detail-label">Tips Penggunaan</span>
+            <h2>Cara Membaca Signal</h2>
+          </div>
+          <button className="icon-button" onClick={onClose} aria-label="Tutup tips penggunaan" title="Tutup">
+            <X size={18} />
+          </button>
+        </div>
+
+        <div className="guide-grid">
+          <GuideBlock
+            title="Filosofi Radar"
+            items={[
+              ["Inti sistem", "Signal ranker dipakai untuk menyaring market noise dari banyak screener sekaligus."],
+              ["Konfluensi", "Satu signal bisa kebetulan, dua signal mulai jadi pola, tiga signal atau lebih berarti konfirmasi pasar lebih kuat."],
+              ["Peran trader", "Dashboard menunjukkan aktivitas besar. Eksekusi tetap wajib divalidasi dengan chart, bid-offer, dan trading plan."],
+            ]}
+          />
+          <GuideBlock
+            title="Baca Kolom Rekap"
+            items={[
+              ["FREK", "Berapa kali emiten muncul di screener. Makin sering muncul, makin intens dipantau radar."],
+              ["SCORE", "Bobot kualitas signal. Skor minimal 10.0 memberi keyakinan lebih tinggi."],
+              ["AWAL/AKHIR", "Bandingkan harga deteksi pertama dan harga terbaru untuk melihat apakah harga sudah terlalu jauh."],
+              ["GAIN %", "Ideal entry saat gain masih rendah, sekitar 0-2%. Jika sudah naik lebih dari 4% dari AWAL, hindari chasing."],
+              ["SEKTOR", "Jika Top 5 didominasi satu sektor, biasanya sedang ada money flow di sektor tersebut."],
+            ]}
+          />
+          <GuideBlock
+            title="Core Screener"
+            items={[
+              ["Tier 1", "STRUCTURAL PULLBACK PRO WITH INFLOW, BREAKOUT SMART MONEY PRO, SMART MONEY DOMINANT, FRESH AURA KASIH."],
+              ["Karakter", "Ada inflow atau bandar, entry lebih rapi, dan risk lebih terukur."],
+              ["Tier 2", "SMART FLOW MOMENTUM, SWING MOMENTUM / PRO, STRONG CLOSING PRO."],
+              ["Karakter", "Cepat untuk intraday atau breakout hunter, tapi lebih rawan fake signal."],
+              ["Tier 3", "SAHAM TREND JALAN, TREND FOLLOW, OVERNIGHT TREND FOLLOW. Lebih aman, tetapi entry sering lebih telat."],
+            ]}
+          />
+          <GuideBlock
+            title="Bobot Screener"
+            items={[
+              ["5 poin", "High Conviction: Bullish Engulfing Tamara, Fresh Aura Kasih, Smart Money Dominant."],
+              ["4 poin", "Strong Momentum: Early Accumulation, Breakout Smart Money Pro, Trend/Structural Pullback Pro."],
+              ["1-3 poin", "Confirmation: Smart Flow Momentum, Swing Momentum, Strong Closing, Accum 20."],
+              ["Cara pakai", "Pakai bobot ini untuk membedakan signal inti dengan signal konfirmasi biasa."],
+            ]}
+          />
+          <GuideBlock
+            title="Kombinasi Terbaik"
+            items={[
+              ["Early to Confirmed", "SWING MOMENTUM + BREAKOUT SMART MONEY + STRONG CLOSING PRO. Deteksi awal divalidasi akumulasi dan tenaga akhir sesi."],
+              ["Trend Aman", "Saham Trend Jalan + STRONG CLOSING PRO. Cocok untuk trading lebih santai dan menghindari false breakout."],
+              ["High Conviction", "SSE Selection + minimal 2 algo lain. Jika SSE muncul dan didukung algo lain, biasanya signal lebih bersih."],
+            ]}
+          />
+          <GuideBlock
+            title="Rule Entry"
+            items={[
+              ["3-Algo Rule", "Entry hanya jika emiten muncul di minimal 3 algoritma berbeda."],
+              ["Wajib ada", "Salah satunya sebaiknya SWING, BREAKOUT, atau SMART MONEY."],
+              ["Skor", "Prioritaskan emiten dengan skor akumulasi minimal 10.0."],
+              ["Closing", "Lebih ideal jika setup ditutup dengan STRONG CLOSING atau STRONG CLOSING PRO."],
+            ]}
+          />
+          <GuideBlock
+            title="Teknik Eksekusi"
+            items={[
+              ["Entry 1", "Saat signal Smart Money dominant, early, atau pro keluar, cek chart lalu masuk 30-50%."],
+              ["Tambah posisi", "Jika momentum muncul di emiten yang sama dan harga baru mulai rally, tambah 30-50% lagi."],
+              ["No chasing", "Jika harga sudah terlalu jauh dari harga AWAL atau sudah naik lebih dari 4%, jangan dikejar."],
+              ["Take profit", "TP sesuai target dan kadar risiko masing-masing. Jangan biarkan profit berubah menjadi loss."],
+            ]}
+          />
+          <GuideBlock
+            title="Fresh Aura Kasih"
+            items={[
+              ["Fungsi", "Leading indicator yang selektif dan sering muncul di fase awal pembalikan arah."],
+              ["Jangan standalone", "Jangan dipakai sendirian untuk buy."],
+              ["Entry jika", "Fresh Aura diikuti atau disertai Swing Momentum atau Breakout."],
+              ["Best use", "Trigger awal untuk mulai memantau chart dengan ketat."],
+            ]}
+          />
+          <GuideBlock
+            title="Validasi Sebelum Buy"
+            items={[
+              ["Chart", "Cek apakah harga dekat resistance, dekat support, baru breakout, atau punya pola VBP yang mendukung."],
+              ["Bid-offer", "Pastikan ada antusiasme pembeli dan bid tebal. Jika Haka masih tebal, momentum lebih layak dipantau."],
+              ["AWAL vs AKHIR", "Pastikan jarak harga belum terlalu jauh dari deteksi awal."],
+              ["Volume", "Hindari saham yang volumenya mendadak mengering meskipun harga naik sedikit."],
+            ]}
+          />
+          <GuideBlock
+            title="Matriks Cepat"
+            items={[
+              ["Top 1-3", "High conviction. Cek chart, kalau dekat support atau baru breakout bisa segera entri sesuai plan."],
+              ["Naik pesat", "Momentum chasing. Pantau running trade dan ikut arus hanya jika bid/volume masih sehat."],
+              ["Top 10 stabil", "Watchlist sore. Jika skor bertahan sampai penutupan, pertimbangkan Beli Sore Jual Pagi."],
+              ["Skor < 5", "Abaikan dulu kecuali skornya mulai merangkak naik."],
+            ]}
+          />
+          <GuideBlock
+            title="2x2 dan Filter Noise"
+            items={[
+              ["2+ screener", "Emiten minimal muncul di 2 screener berbeda sebelum dilirik serius."],
+              ["2+ hari", "Lebih bagus jika muncul konsisten minimal 2 hari untuk menunjukkan follow-through hot money."],
+              ["Uang Gede saja", "Abaikan emiten yang hanya muncul di Uang Gede tanpa dukungan screener Tier A."],
+              ["Signal banyak", "Jangan terpancing jumlah signal mentah. Cari dukungan lintas algo dan harga yang belum kejauhan."],
+            ]}
+          />
+          <GuideBlock
+            title="Proteksi Modal"
+            items={[
+              ["Stop loss", "Bisa gunakan -3% atau di bawah low candle saat signal pertama muncul, sesuaikan plan masing-masing."],
+              ["TP 1", "Di sekitar +5%, jual sebagian misalnya 50% untuk mengamankan modal."],
+              ["TP 2", "Let the profit run selama emiten masih muncul di Saham Trend Jalan atau Swing Momentum."],
+              ["Pyramiding", "Tambah posisi hanya jika skor terus meningkat dan harga bertahan di atas harga AWAL."],
             ]}
           />
         </div>
