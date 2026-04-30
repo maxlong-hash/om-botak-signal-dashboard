@@ -101477,6 +101477,8 @@
    "type": "message",
    "date": "2026-04-30T11:59:12",
    "date_unixtime": "1777525152",
+   "edited": "2026-04-30T12:01:11",
+   "edited_unixtime": "1777525271",
    "from": "MasBotaxx",
    "from_id": "user8676985576",
    "reply_to_message_id": 449371,
