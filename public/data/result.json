@@ -100768,23 +100768,23 @@
    "reactions": [
     {
      "type": "emoji",
-     "count": 8,
+     "count": 10,
      "emoji": "🔥",
      "recent": [
+      {
+       "from": "DIRUT CDIA",
+       "from_id": "user7951636293",
+       "date": "2026-04-30T13:15:30"
+      },
+      {
+       "from": "Uwen",
+       "from_id": "user6286226786",
+       "date": "2026-04-30T12:30:27"
+      },
       {
        "from": "fräu",
        "from_id": "user1190172535",
        "date": "2026-04-30T11:47:12"
-      },
-      {
-       "from": "Muhammad Labib JK",
-       "from_id": "user1285398443",
-       "date": "2026-04-30T11:23:58"
-      },
-      {
-       "from": "DickoMarpaung A073",
-       "from_id": "user928552990",
-       "date": "2026-04-30T11:22:50"
       }
      ]
     }
@@ -100987,6 +100987,8 @@
    "type": "message",
    "date": "2026-04-30T11:07:06",
    "date_unixtime": "1777522026",
+   "edited": "2026-04-30T13:34:46",
+   "edited_unixtime": "1777530886",
    "from": "MasBotaxx",
    "from_id": "user8676985576",
    "reply_to_message_id": 449371,
@@ -100995,6 +100997,20 @@
     {
      "type": "plain",
      "text": "Signal Uang Gede\nNASI * | 160 | +1 (Total: 1.0)"
+    }
+   ],
+   "reactions": [
+    {
+     "type": "emoji",
+     "count": 1,
+     "emoji": "❤",
+     "recent": [
+      {
+       "from": "Gunawan",
+       "from_id": "user6503744364",
+       "date": "2026-04-30T13:34:46"
+      }
+     ]
     }
    ]
   },
@@ -101546,6 +101562,2967 @@
     {
      "type": "plain",
      "text": "Signal Uang Gede\nVISI * | 875 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461183,
+   "type": "message",
+   "date": "2026-04-30T13:31:26",
+   "date_unixtime": "1777530686",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDNAR | 144 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDNAR | 144 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461184,
+   "type": "message",
+   "date": "2026-04-30T13:31:28",
+   "date_unixtime": "1777530688",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nFUJI | 328 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nFUJI | 328 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461187,
+   "type": "message",
+   "date": "2026-04-30T13:32:26",
+   "date_unixtime": "1777530746",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nFUJI | 328 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nFUJI | 328 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461191,
+   "type": "message",
+   "date": "2026-04-30T13:32:45",
+   "date_unixtime": "1777530765",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nVICI * | 605 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nVICI * | 605 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461195,
+   "type": "message",
+   "date": "2026-04-30T13:34:22",
+   "date_unixtime": "1777530862",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nMITI * | 246 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nMITI * | 246 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461209,
+   "type": "message",
+   "date": "2026-04-30T13:38:22",
+   "date_unixtime": "1777531102",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nJAYA * | 146 | +6 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nJAYA * | 146 | +6 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461211,
+   "type": "message",
+   "date": "2026-04-30T13:39:25",
+   "date_unixtime": "1777531165",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSURI * | 82 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSURI * | 82 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461223,
+   "type": "message",
+   "date": "2026-04-30T13:42:22",
+   "date_unixtime": "1777531342",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nCPIN * | 3980 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nCPIN * | 3980 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461244,
+   "type": "message",
+   "date": "2026-04-30T13:49:20",
+   "date_unixtime": "1777531760",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nEXCL * | 2990 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nEXCL * | 2990 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461262,
+   "type": "message",
+   "date": "2026-04-30T13:54:04",
+   "date_unixtime": "1777532044",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nTMPO * | 141 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nTMPO * | 141 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461270,
+   "type": "message",
+   "date": "2026-04-30T13:55:49",
+   "date_unixtime": "1777532149",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nTMPO * | 147 | +6 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nTMPO * | 147 | +6 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461275,
+   "type": "message",
+   "date": "2026-04-30T13:56:25",
+   "date_unixtime": "1777532185",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nCPIN * | 3990 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nCPIN * | 3990 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461276,
+   "type": "message",
+   "date": "2026-04-30T13:56:25",
+   "date_unixtime": "1777532185",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 13:56:25\n📊 Data   : 54\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   SRSN     9.0    70     70       0.0%  OTHERS\n2  4   PADI     9.0    110    113      2.7%  FINANCIAL\n3  3   TMPO*    8.0    138    147      6.5%  CYCLICAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   BSML*    8.0    404    402     -0.5%  ENERGY\n8  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n9  2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n10 2   NTBK*    7.0    85     89       4.7%  OTHERS\n11 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n12 1   MOLI     6.0    300    300      0.0%  OTHERS\n13 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n14 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n15 1   DKFT*    6.0    840    840      0.0%  OTHERS\n16 1   CTTH     6.0    156    156      0.0%  OTHERS\n17 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n18 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n19 4   ADRO*    4.0    2450   2440    -0.4%  ENERGY\n20 3   RODA*    3.0    81     85       4.9%  PROPERTY\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 13:56:25\n📊 Data   : 54\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   SRSN     9.0    70     70       0.0%  OTHERS\n2  4   PADI     9.0    110    113      2.7%  FINANCIAL\n3  3   TMPO*    8.0    138    147      6.5%  CYCLICAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   BSML*    8.0    404    402     -0.5%  ENERGY\n8  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n9  2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n10 2   NTBK*    7.0    85     89       4.7%  OTHERS\n11 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n12 1   MOLI     6.0    300    300      0.0%  OTHERS\n13 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n14 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n15 1   DKFT*    6.0    840    840      0.0%  OTHERS\n16 1   CTTH     6.0    156    156      0.0%  OTHERS\n17 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n18 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n19 4   ADRO*    4.0    2450   2440    -0.4%  ENERGY\n20 3   RODA*    3.0    81     85       4.9%  PROPERTY\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461279,
+   "type": "message",
+   "date": "2026-04-30T13:56:43",
+   "date_unixtime": "1777532203",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nTMPO * | 150 | +1 (Total: 9.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nTMPO * | 150 | +1 (Total: 9.0)"
+    }
+   ]
+  },
+  {
+   "id": 461287,
+   "type": "message",
+   "date": "2026-04-30T13:58:20",
+   "date_unixtime": "1777532300",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 394 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 394 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461291,
+   "type": "message",
+   "date": "2026-04-30T13:59:22",
+   "date_unixtime": "1777532362",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 404 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 404 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461304,
+   "type": "message",
+   "date": "2026-04-30T14:01:19",
+   "date_unixtime": "1777532479",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 137 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 137 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461310,
+   "type": "message",
+   "date": "2026-04-30T14:02:20",
+   "date_unixtime": "1777532540",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:02:19\n📊 Data   : 55\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   BSML*    8.0    404    402     -0.5%  ENERGY\n8  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n9  2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n10 2   NTBK*    7.0    85     89       4.7%  OTHERS\n11 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n12 1   MOLI     6.0    300    300      0.0%  OTHERS\n13 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n14 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n15 1   DKFT*    6.0    840    840      0.0%  OTHERS\n16 1   CTTH     6.0    156    156      0.0%  OTHERS\n17 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n18 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n19 4   ADRO*    4.0    2450   2440    -0.4%  ENERGY\n20 3   RODA*    3.0    81     85       4.9%  PROPERTY\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:02:19\n📊 Data   : 55\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   BSML*    8.0    404    402     -0.5%  ENERGY\n8  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n9  2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n10 2   NTBK*    7.0    85     89       4.7%  OTHERS\n11 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n12 1   MOLI     6.0    300    300      0.0%  OTHERS\n13 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n14 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n15 1   DKFT*    6.0    840    840      0.0%  OTHERS\n16 1   CTTH     6.0    156    156      0.0%  OTHERS\n17 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n18 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n19 4   ADRO*    4.0    2450   2440    -0.4%  ENERGY\n20 3   RODA*    3.0    81     85       4.9%  PROPERTY\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461312,
+   "type": "message",
+   "date": "2026-04-30T14:02:23",
+   "date_unixtime": "1777532543",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 136 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 136 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461318,
+   "type": "message",
+   "date": "2026-04-30T14:03:42",
+   "date_unixtime": "1777532622",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nKOBX * | 188 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nKOBX * | 188 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461321,
+   "type": "message",
+   "date": "2026-04-30T14:04:21",
+   "date_unixtime": "1777532661",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nJKON * | 77 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nJKON * | 77 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461326,
+   "type": "message",
+   "date": "2026-04-30T14:07:06",
+   "date_unixtime": "1777532826",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nJPFA * | 2470 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nJPFA * | 2470 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461327,
+   "type": "message",
+   "date": "2026-04-30T14:07:06",
+   "date_unixtime": "1777532826",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:07:05\n📊 Data   : 55\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   BSML*    8.0    404    402     -0.5%  ENERGY\n8  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n9  2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n10 2   NTBK*    7.0    85     89       4.7%  OTHERS\n11 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n12 1   MOLI     6.0    300    300      0.0%  OTHERS\n13 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n14 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n15 1   DKFT*    6.0    840    840      0.0%  OTHERS\n16 1   CTTH     6.0    156    156      0.0%  OTHERS\n17 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n18 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n19 4   ADRO*    4.0    2450   2440    -0.4%  ENERGY\n20 3   RODA*    3.0    81     85       4.9%  PROPERTY\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:07:05\n📊 Data   : 55\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   BSML*    8.0    404    402     -0.5%  ENERGY\n8  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n9  2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n10 2   NTBK*    7.0    85     89       4.7%  OTHERS\n11 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n12 1   MOLI     6.0    300    300      0.0%  OTHERS\n13 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n14 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n15 1   DKFT*    6.0    840    840      0.0%  OTHERS\n16 1   CTTH     6.0    156    156      0.0%  OTHERS\n17 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n18 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n19 4   ADRO*    4.0    2450   2440    -0.4%  ENERGY\n20 3   RODA*    3.0    81     85       4.9%  PROPERTY\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461331,
+   "type": "message",
+   "date": "2026-04-30T14:07:42",
+   "date_unixtime": "1777532862",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nNZIA * | 153 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nNZIA * | 153 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461334,
+   "type": "message",
+   "date": "2026-04-30T14:09:04",
+   "date_unixtime": "1777532944",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nPALM * | 378 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nPALM * | 378 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461336,
+   "type": "message",
+   "date": "2026-04-30T14:09:04",
+   "date_unixtime": "1777532944",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSMRA * | 310 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSMRA * | 310 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461348,
+   "type": "message",
+   "date": "2026-04-30T14:12:25",
+   "date_unixtime": "1777533145",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 139 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 139 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461351,
+   "type": "message",
+   "date": "2026-04-30T14:13:01",
+   "date_unixtime": "1777533181",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nGGRM | 16125 | +6 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nGGRM | 16125 | +6 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461353,
+   "type": "message",
+   "date": "2026-04-30T14:13:18",
+   "date_unixtime": "1777533198",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBMHS * | 184 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBMHS * | 184 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461355,
+   "type": "message",
+   "date": "2026-04-30T14:13:38",
+   "date_unixtime": "1777533218",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 4.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 4.0)"
+    }
+   ]
+  },
+  {
+   "id": 461357,
+   "type": "message",
+   "date": "2026-04-30T14:13:39",
+   "date_unixtime": "1777533219",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nGGRM | 16200 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nGGRM | 16200 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461359,
+   "type": "message",
+   "date": "2026-04-30T14:14:23",
+   "date_unixtime": "1777533263",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 5.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 5.0)"
+    }
+   ]
+  },
+  {
+   "id": 461360,
+   "type": "message",
+   "date": "2026-04-30T14:14:23",
+   "date_unixtime": "1777533263",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nJMAS * | 220 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nJMAS * | 220 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461361,
+   "type": "message",
+   "date": "2026-04-30T14:14:23",
+   "date_unixtime": "1777533263",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nGGRM | 16350 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nGGRM | 16350 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461363,
+   "type": "message",
+   "date": "2026-04-30T14:14:27",
+   "date_unixtime": "1777533267",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:14:23\n📊 Data   : 56\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   GGRM     8.0    16125  16350    1.4%  NON CYCLICAL\n8  3   BSML*    8.0    404    402     -0.5%  ENERGY\n9  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 1   MOLI     6.0    300    300      0.0%  OTHERS\n14 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n15 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n16 1   DKFT*    6.0    840    840      0.0%  OTHERS\n17 1   CTTH     6.0    156    156      0.0%  OTHERS\n18 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n19 5   DMAS*    5.0    137    141      2.9%  PROPERTY\n20 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:14:23\n📊 Data   : 56\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   GGRM     8.0    16125  16350    1.4%  NON CYCLICAL\n8  3   BSML*    8.0    404    402     -0.5%  ENERGY\n9  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 1   MOLI     6.0    300    300      0.0%  OTHERS\n14 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n15 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n16 1   DKFT*    6.0    840    840      0.0%  OTHERS\n17 1   CTTH     6.0    156    156      0.0%  OTHERS\n18 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n19 5   DMAS*    5.0    137    141      2.9%  PROPERTY\n20 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461364,
+   "type": "message",
+   "date": "2026-04-30T14:14:27",
+   "date_unixtime": "1777533267",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:14:23\n📊 Data   : 56\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   GGRM     8.0    16125  16350    1.4%  NON CYCLICAL\n8  3   BSML*    8.0    404    402     -0.5%  ENERGY\n9  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 1   MOLI     6.0    300    300      0.0%  OTHERS\n14 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n15 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n16 1   DKFT*    6.0    840    840      0.0%  OTHERS\n17 1   CTTH     6.0    156    156      0.0%  OTHERS\n18 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n19 5   DMAS*    5.0    137    141      2.9%  PROPERTY\n20 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:14:23\n📊 Data   : 56\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n2  4   SRSN     9.0    70     70       0.0%  OTHERS\n3  4   PADI     9.0    110    113      2.7%  FINANCIAL\n4  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n5  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n6  3   INDO     8.0    160    160      0.0%  PROPERTY\n7  3   GGRM     8.0    16125  16350    1.4%  NON CYCLICAL\n8  3   BSML*    8.0    404    402     -0.5%  ENERGY\n9  3   AYAM*    8.0    332    332      0.0%  NON CYCLICAL\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 1   MOLI     6.0    300    300      0.0%  OTHERS\n14 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n15 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n16 1   DKFT*    6.0    840    840      0.0%  OTHERS\n17 1   CTTH     6.0    156    156      0.0%  OTHERS\n18 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n19 5   DMAS*    5.0    137    141      2.9%  PROPERTY\n20 4   UNTD     4.0    87     87       0.0%  CYCLICAL\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461366,
+   "type": "message",
+   "date": "2026-04-30T14:14:42",
+   "date_unixtime": "1777533282",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nGGRM | 16475 | +1 (Total: 9.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nGGRM | 16475 | +1 (Total: 9.0)"
+    }
+   ]
+  },
+  {
+   "id": 461367,
+   "type": "message",
+   "date": "2026-04-30T14:15:08",
+   "date_unixtime": "1777533308",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal SIRKUIT P\nGGRM | 16500 | +1 (Total: 10.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal SIRKUIT P\nGGRM | 16500 | +1 (Total: 10.0)"
+    }
+   ]
+  },
+  {
+   "id": 461369,
+   "type": "message",
+   "date": "2026-04-30T14:15:20",
+   "date_unixtime": "1777533320",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461375,
+   "type": "message",
+   "date": "2026-04-30T14:17:02",
+   "date_unixtime": "1777533422",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nGGRM | 17000 | +1 (Total: 11.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nGGRM | 17000 | +1 (Total: 11.0)"
+    }
+   ]
+  },
+  {
+   "id": 461380,
+   "type": "message",
+   "date": "2026-04-30T14:17:21",
+   "date_unixtime": "1777533441",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nWIIM | 1940 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nWIIM | 1940 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461390,
+   "type": "message",
+   "date": "2026-04-30T14:18:39",
+   "date_unixtime": "1777533519",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 141 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461405,
+   "type": "message",
+   "date": "2026-04-30T14:20:58",
+   "date_unixtime": "1777533658",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBBKP | 61 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBBKP | 61 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461408,
+   "type": "message",
+   "date": "2026-04-30T14:21:20",
+   "date_unixtime": "1777533680",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAYAM * | 330 | +1 (Total: 9.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAYAM * | 330 | +1 (Total: 9.0)"
+    }
+   ]
+  },
+  {
+   "id": 461412,
+   "type": "message",
+   "date": "2026-04-30T14:21:41",
+   "date_unixtime": "1777533701",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nBTPS * | 980 | +6 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nBTPS * | 980 | +6 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461416,
+   "type": "message",
+   "date": "2026-04-30T14:21:59",
+   "date_unixtime": "1777533719",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAYAM * | 332 | +1 (Total: 10.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAYAM * | 332 | +1 (Total: 10.0)"
+    }
+   ]
+  },
+  {
+   "id": 461417,
+   "type": "message",
+   "date": "2026-04-30T14:21:59",
+   "date_unixtime": "1777533719",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:21:59\n📊 Data   : 60\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  5   AYAM*    10.0   332    332      0.0%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n7  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n8  3   INDO     8.0    160    160      0.0%  PROPERTY\n9  3   BSML*    8.0    404    402     -0.5%  ENERGY\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 7   DMAS*    7.0    137    141      2.9%  PROPERTY\n14 1   MOLI     6.0    300    300      0.0%  OTHERS\n15 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n16 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n17 1   DKFT*    6.0    840    840      0.0%  OTHERS\n18 1   CTTH     6.0    156    156      0.0%  OTHERS\n19 1   BTPS*    6.0    980    980      0.0%  KONGLO\n20 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:21:59\n📊 Data   : 60\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  5   AYAM*    10.0   332    332      0.0%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n7  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n8  3   INDO     8.0    160    160      0.0%  PROPERTY\n9  3   BSML*    8.0    404    402     -0.5%  ENERGY\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 7   DMAS*    7.0    137    141      2.9%  PROPERTY\n14 1   MOLI     6.0    300    300      0.0%  OTHERS\n15 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n16 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n17 1   DKFT*    6.0    840    840      0.0%  OTHERS\n18 1   CTTH     6.0    156    156      0.0%  OTHERS\n19 1   BTPS*    6.0    980    980      0.0%  KONGLO\n20 1   AADI*    6.0    11425  11425    0.0%  ENERGY\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461424,
+   "type": "message",
+   "date": "2026-04-30T14:22:37",
+   "date_unixtime": "1777533757",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAADI * | 11300 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAADI * | 11300 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461426,
+   "type": "message",
+   "date": "2026-04-30T14:22:38",
+   "date_unixtime": "1777533758",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nADRO * | 2450 | +1 (Total: 5.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nADRO * | 2450 | +1 (Total: 5.0)"
+    }
+   ]
+  },
+  {
+   "id": 461436,
+   "type": "message",
+   "date": "2026-04-30T14:25:01",
+   "date_unixtime": "1777533901",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nMNCN * | 238 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nMNCN * | 238 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461441,
+   "type": "message",
+   "date": "2026-04-30T14:26:17",
+   "date_unixtime": "1777533977",
+   "edited": "2026-04-30T14:26:25",
+   "edited_unixtime": "1777533985",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAYAM * | 336 | +1 (Total: 11.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAYAM * | 336 | +1 (Total: 11.0)"
+    }
+   ],
+   "reactions": [
+    {
+     "type": "emoji",
+     "count": 1,
+     "emoji": "❤",
+     "recent": [
+      {
+       "from": "BintangMs95_A067",
+       "from_id": "user6462727492",
+       "date": "2026-04-30T14:26:25"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 461444,
+   "type": "message",
+   "date": "2026-04-30T14:26:42",
+   "date_unixtime": "1777534002",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nRSCH | 274 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nRSCH | 274 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461451,
+   "type": "message",
+   "date": "2026-04-30T14:28:02",
+   "date_unixtime": "1777534082",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nRSCH | 272 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nRSCH | 272 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461455,
+   "type": "message",
+   "date": "2026-04-30T14:28:43",
+   "date_unixtime": "1777534123",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAMRT | 1335 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAMRT | 1335 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461458,
+   "type": "message",
+   "date": "2026-04-30T14:29:21",
+   "date_unixtime": "1777534161",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:29:21\n📊 Data   : 62\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  6   AYAM*    11.0   332    336      1.2%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n7  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n8  3   INDO     8.0    160    160      0.0%  PROPERTY\n9  3   BSML*    8.0    404    402     -0.5%  ENERGY\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 7   DMAS*    7.0    137    141      2.9%  PROPERTY\n14 2   AADI*    7.0    11425  11300   -1.1%  ENERGY\n15 1   MOLI     6.0    300    300      0.0%  OTHERS\n16 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n17 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n18 1   DKFT*    6.0    840    840      0.0%  OTHERS\n19 1   CTTH     6.0    156    156      0.0%  OTHERS\n20 1   BTPS*    6.0    980    980      0.0%  KONGLO\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:29:21\n📊 Data   : 62\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  6   AYAM*    11.0   332    336      1.2%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n7  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n8  3   INDO     8.0    160    160      0.0%  PROPERTY\n9  3   BSML*    8.0    404    402     -0.5%  ENERGY\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 7   DMAS*    7.0    137    141      2.9%  PROPERTY\n14 2   AADI*    7.0    11425  11300   -1.1%  ENERGY\n15 1   MOLI     6.0    300    300      0.0%  OTHERS\n16 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n17 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n18 1   DKFT*    6.0    840    840      0.0%  OTHERS\n19 1   CTTH     6.0    156    156      0.0%  OTHERS\n20 1   BTPS*    6.0    980    980      0.0%  KONGLO\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461462,
+   "type": "message",
+   "date": "2026-04-30T14:30:20",
+   "date_unixtime": "1777534220",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nARII * | 300 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nARII * | 300 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461464,
+   "type": "message",
+   "date": "2026-04-30T14:30:43",
+   "date_unixtime": "1777534243",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:30:43\n📊 Data   : 62\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  6   AYAM*    11.0   332    336      1.2%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n7  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n8  3   INDO     8.0    160    160      0.0%  PROPERTY\n9  3   BSML*    8.0    404    402     -0.5%  ENERGY\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 7   DMAS*    7.0    137    141      2.9%  PROPERTY\n14 2   AADI*    7.0    11425  11300   -1.1%  ENERGY\n15 1   MOLI     6.0    300    300      0.0%  OTHERS\n16 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n17 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n18 1   DKFT*    6.0    840    840      0.0%  OTHERS\n19 1   CTTH     6.0    156    156      0.0%  OTHERS\n20 1   BTPS*    6.0    980    980      0.0%  KONGLO\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": OTHERS\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:30:43\n📊 Data   : 62\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  6   AYAM*    11.0   332    336      1.2%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n7  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n8  3   INDO     8.0    160    160      0.0%  PROPERTY\n9  3   BSML*    8.0    404    402     -0.5%  ENERGY\n10 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n11 2   NTBK*    7.0    85     89       4.7%  OTHERS\n12 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n13 7   DMAS*    7.0    137    141      2.9%  PROPERTY\n14 2   AADI*    7.0    11425  11300   -1.1%  ENERGY\n15 1   MOLI     6.0    300    300      0.0%  OTHERS\n16 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n17 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n18 1   DKFT*    6.0    840    840      0.0%  OTHERS\n19 1   CTTH     6.0    156    156      0.0%  OTHERS\n20 1   BTPS*    6.0    980    980      0.0%  KONGLO\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": OTHERS\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461468,
+   "type": "message",
+   "date": "2026-04-30T14:31:23",
+   "date_unixtime": "1777534283",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nMIDI * | 346 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nMIDI * | 346 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461470,
+   "type": "message",
+   "date": "2026-04-30T14:32:01",
+   "date_unixtime": "1777534321",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nADRO * | 2470 | +1 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nADRO * | 2470 | +1 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461472,
+   "type": "message",
+   "date": "2026-04-30T14:32:19",
+   "date_unixtime": "1777534339",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nASII * | 6000 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nASII * | 6000 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461474,
+   "type": "message",
+   "date": "2026-04-30T14:32:20",
+   "date_unixtime": "1777534340",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nBBCA | 5875 | +6 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nBBCA | 5875 | +6 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461475,
+   "type": "message",
+   "date": "2026-04-30T14:32:21",
+   "date_unixtime": "1777534341",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBBNI | 3780 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBBNI | 3780 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461476,
+   "type": "message",
+   "date": "2026-04-30T14:32:22",
+   "date_unixtime": "1777534342",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBTPS * | 985 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBTPS * | 985 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461477,
+   "type": "message",
+   "date": "2026-04-30T14:32:41",
+   "date_unixtime": "1777534361",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nOMED * | 288 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nOMED * | 288 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461480,
+   "type": "message",
+   "date": "2026-04-30T14:33:03",
+   "date_unixtime": "1777534383",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAADI * | 11575 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAADI * | 11575 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461482,
+   "type": "message",
+   "date": "2026-04-30T14:33:08",
+   "date_unixtime": "1777534388",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal SIRKUIT P\nAADI * | 11575 | +1 (Total: 9.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal SIRKUIT P\nAADI * | 11575 | +1 (Total: 9.0)"
+    }
+   ]
+  },
+  {
+   "id": 461484,
+   "type": "message",
+   "date": "2026-04-30T14:33:23",
+   "date_unixtime": "1777534403",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nSONA * | 2780 | +6 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nSONA * | 2780 | +6 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461489,
+   "type": "message",
+   "date": "2026-04-30T14:34:19",
+   "date_unixtime": "1777534459",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSONA * | 2780 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSONA * | 2780 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461491,
+   "type": "message",
+   "date": "2026-04-30T14:34:26",
+   "date_unixtime": "1777534466",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nFAST * | 290 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nFAST * | 290 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461493,
+   "type": "message",
+   "date": "2026-04-30T14:34:44",
+   "date_unixtime": "1777534484",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDMAS * | 140 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDMAS * | 140 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461496,
+   "type": "message",
+   "date": "2026-04-30T14:35:42",
+   "date_unixtime": "1777534542",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBBCA | 5925 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBBCA | 5925 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461499,
+   "type": "message",
+   "date": "2026-04-30T14:36:23",
+   "date_unixtime": "1777534583",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nCPIN * | 4010 | +1 (Total: 4.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nCPIN * | 4010 | +1 (Total: 4.0)"
+    }
+   ]
+  },
+  {
+   "id": 461502,
+   "type": "message",
+   "date": "2026-04-30T14:37:00",
+   "date_unixtime": "1777534620",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:37:00\n📊 Data   : 68\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  6   AYAM*    11.0   332    336      1.2%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n7  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n8  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n9  3   INDO     8.0    160    160      0.0%  PROPERTY\n10 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n11 3   BSML*    8.0    404    402     -0.5%  ENERGY\n12 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n13 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n14 2   NTBK*    7.0    85     89       4.7%  OTHERS\n15 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n16 2   BTPS*    7.0    980    985      0.5%  KONGLO\n17 2   BBCA     7.0    5875   5925     0.9%  KONGLO\n18 1   MOLI     6.0    300    300      0.0%  OTHERS\n19 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n20 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": NON CYCLICAL\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:37:00\n📊 Data   : 68\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n2  6   AYAM*    11.0   332    336      1.2%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n7  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n8  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n9  3   INDO     8.0    160    160      0.0%  PROPERTY\n10 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n11 3   BSML*    8.0    404    402     -0.5%  ENERGY\n12 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n13 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n14 2   NTBK*    7.0    85     89       4.7%  OTHERS\n15 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n16 2   BTPS*    7.0    980    985      0.5%  KONGLO\n17 2   BBCA     7.0    5875   5925     0.9%  KONGLO\n18 1   MOLI     6.0    300    300      0.0%  OTHERS\n19 1   JAYA*    6.0    146    146      0.0%  TRANSPORTATION & LOGISTIC\n20 1   JARR     6.0    2170   2170     0.0%  NON CYCLICAL\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": NON CYCLICAL\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461508,
+   "type": "message",
+   "date": "2026-04-30T14:38:18",
+   "date_unixtime": "1777534698",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nNICL * | 870 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nNICL * | 870 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461511,
+   "type": "message",
+   "date": "2026-04-30T14:38:24",
+   "date_unixtime": "1777534704",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nLUCY | 1570 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nLUCY | 1570 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461513,
+   "type": "message",
+   "date": "2026-04-30T14:39:22",
+   "date_unixtime": "1777534762",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nGRPH * | 67 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nGRPH * | 67 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461515,
+   "type": "message",
+   "date": "2026-04-30T14:39:23",
+   "date_unixtime": "1777534763",
+   "edited": "2026-04-30T15:18:55",
+   "edited_unixtime": "1777537135",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nNICL * | 870 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nNICL * | 870 | +1 (Total: 2.0)"
+    }
+   ],
+   "reactions": [
+    {
+     "type": "emoji",
+     "count": 1,
+     "emoji": "🔥",
+     "recent": [
+      {
+       "from": "Rlnd.",
+       "from_id": "user7645514309",
+       "date": "2026-04-30T15:18:55"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 461517,
+   "type": "message",
+   "date": "2026-04-30T14:40:04",
+   "date_unixtime": "1777534804",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nADRO * | 2490 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nADRO * | 2490 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461520,
+   "type": "message",
+   "date": "2026-04-30T14:41:07",
+   "date_unixtime": "1777534867",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAYAM * | 336 | +1 (Total: 12.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAYAM * | 336 | +1 (Total: 12.0)"
+    }
+   ]
+  },
+  {
+   "id": 461530,
+   "type": "message",
+   "date": "2026-04-30T14:44:22",
+   "date_unixtime": "1777535062",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDF * | 6800 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDF * | 6800 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461533,
+   "type": "message",
+   "date": "2026-04-30T14:44:43",
+   "date_unixtime": "1777535083",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 234 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 234 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461537,
+   "type": "message",
+   "date": "2026-04-30T14:45:27",
+   "date_unixtime": "1777535127",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 238 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 238 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461540,
+   "type": "message",
+   "date": "2026-04-30T14:45:44",
+   "date_unixtime": "1777535144",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 238 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 238 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461545,
+   "type": "message",
+   "date": "2026-04-30T14:46:22",
+   "date_unixtime": "1777535182",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nTRON * | 136 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nTRON * | 136 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461551,
+   "type": "message",
+   "date": "2026-04-30T14:47:19",
+   "date_unixtime": "1777535239",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSKBM * | 695 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSKBM * | 695 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461553,
+   "type": "message",
+   "date": "2026-04-30T14:47:21",
+   "date_unixtime": "1777535241",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 238 | +1 (Total: 4.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 238 | +1 (Total: 4.0)"
+    }
+   ]
+  },
+  {
+   "id": 461555,
+   "type": "message",
+   "date": "2026-04-30T14:47:38",
+   "date_unixtime": "1777535258",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 242 | +1 (Total: 5.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 242 | +1 (Total: 5.0)"
+    }
+   ]
+  },
+  {
+   "id": 461557,
+   "type": "message",
+   "date": "2026-04-30T14:47:45",
+   "date_unixtime": "1777535265",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBNBR * | 220 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBNBR * | 220 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461558,
+   "type": "message",
+   "date": "2026-04-30T14:47:59",
+   "date_unixtime": "1777535279",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 244 | +1 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 244 | +1 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461563,
+   "type": "message",
+   "date": "2026-04-30T14:49:03",
+   "date_unixtime": "1777535343",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nIATA * | 85 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nIATA * | 85 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461569,
+   "type": "message",
+   "date": "2026-04-30T14:50:38",
+   "date_unixtime": "1777535438",
+   "edited": "2026-04-30T14:58:47",
+   "edited_unixtime": "1777535927",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nNICE * | 326 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nNICE * | 326 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461573,
+   "type": "message",
+   "date": "2026-04-30T14:51:42",
+   "date_unixtime": "1777535502",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 244 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 244 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461581,
+   "type": "message",
+   "date": "2026-04-30T14:54:41",
+   "date_unixtime": "1777535681",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDFAM | 113 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDFAM | 113 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461583,
+   "type": "message",
+   "date": "2026-04-30T14:55:05",
+   "date_unixtime": "1777535705",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nADRO * | 2490 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nADRO * | 2490 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461588,
+   "type": "message",
+   "date": "2026-04-30T14:56:28",
+   "date_unixtime": "1777535788",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDFAM | 115 | +1 (Total: 4.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDFAM | 115 | +1 (Total: 4.0)"
+    }
+   ]
+  },
+  {
+   "id": 461589,
+   "type": "message",
+   "date": "2026-04-30T14:56:28",
+   "date_unixtime": "1777535788",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:56:28\n📊 Data   : 82\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  7   AYAM*    12.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n7  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n8  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n9  3   INDO     8.0    160    160      0.0%  PROPERTY\n10 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n11 3   BSML*    8.0    404    402     -0.5%  ENERGY\n12 8   ADRO*    8.0    2450   2490     1.6%  ENERGY\n13 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n14 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n15 2   NTBK*    7.0    85     89       4.7%  OTHERS\n16 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n17 7   BUMI*    7.0    234    244      4.3%  ENERGY\n18 2   BTPS*    7.0    980    985      0.5%  KONGLO\n19 2   BBCA     7.0    5875   5925     0.9%  KONGLO\n20 1   MOLI     6.0    300    300      0.0%  OTHERS\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": ENERGY\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:56:28\n📊 Data   : 82\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  7   AYAM*    12.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  4   PADI     9.0    110    113      2.7%  FINANCIAL\n6  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n7  8   SDMU     8.0    95     118     24.2%  TRANSPORTATION & LOGISTIC\n8  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n9  3   INDO     8.0    160    160      0.0%  PROPERTY\n10 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n11 3   BSML*    8.0    404    402     -0.5%  ENERGY\n12 8   ADRO*    8.0    2450   2490     1.6%  ENERGY\n13 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n14 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n15 2   NTBK*    7.0    85     89       4.7%  OTHERS\n16 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n17 7   BUMI*    7.0    234    244      4.3%  ENERGY\n18 2   BTPS*    7.0    980    985      0.5%  KONGLO\n19 2   BBCA     7.0    5875   5925     0.9%  KONGLO\n20 1   MOLI     6.0    300    300      0.0%  OTHERS\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": ENERGY\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461592,
+   "type": "message",
+   "date": "2026-04-30T14:57:02",
+   "date_unixtime": "1777535822",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSDMU | 112 | +1 (Total: 9.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSDMU | 112 | +1 (Total: 9.0)"
+    }
+   ]
+  },
+  {
+   "id": 461593,
+   "type": "message",
+   "date": "2026-04-30T14:57:03",
+   "date_unixtime": "1777535823",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:57:02\n📊 Data   : 83\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  7   AYAM*    12.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  9   SDMU     9.0    95     112     17.9%  TRANSPORTATION & LOGISTIC\n6  4   PADI     9.0    110    113      2.7%  FINANCIAL\n7  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n8  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n9  3   INDO     8.0    160    160      0.0%  PROPERTY\n10 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n11 3   BSML*    8.0    404    402     -0.5%  ENERGY\n12 8   ADRO*    8.0    2450   2490     1.6%  ENERGY\n13 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n14 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n15 2   NTBK*    7.0    85     89       4.7%  OTHERS\n16 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n17 7   BUMI*    7.0    234    244      4.3%  ENERGY\n18 2   BTPS*    7.0    980    985      0.5%  KONGLO\n19 2   BBCA     7.0    5875   5925     0.9%  KONGLO\n20 1   MOLI     6.0    300    300      0.0%  OTHERS\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": ENERGY\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 14:57:02\n📊 Data   : 83\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  7   AYAM*    12.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n4  4   SRSN     9.0    70     70       0.0%  OTHERS\n5  9   SDMU     9.0    95     112     17.9%  TRANSPORTATION & LOGISTIC\n6  4   PADI     9.0    110    113      2.7%  FINANCIAL\n7  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n8  3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n9  3   INDO     8.0    160    160      0.0%  PROPERTY\n10 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n11 3   BSML*    8.0    404    402     -0.5%  ENERGY\n12 8   ADRO*    8.0    2450   2490     1.6%  ENERGY\n13 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n14 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n15 2   NTBK*    7.0    85     89       4.7%  OTHERS\n16 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n17 7   BUMI*    7.0    234    244      4.3%  ENERGY\n18 2   BTPS*    7.0    980    985      0.5%  KONGLO\n19 2   BBCA     7.0    5875   5925     0.9%  KONGLO\n20 1   MOLI     6.0    300    300      0.0%  OTHERS\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": ENERGY\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461596,
+   "type": "message",
+   "date": "2026-04-30T14:57:43",
+   "date_unixtime": "1777535863",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSDMU | 115 | +1 (Total: 10.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSDMU | 115 | +1 (Total: 10.0)"
+    }
+   ]
+  },
+  {
+   "id": 461597,
+   "type": "message",
+   "date": "2026-04-30T14:57:59",
+   "date_unixtime": "1777535879",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nCPIN * | 4010 | +1 (Total: 5.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nCPIN * | 4010 | +1 (Total: 5.0)"
+    }
+   ]
+  },
+  {
+   "id": 461618,
+   "type": "message",
+   "date": "2026-04-30T15:11:18",
+   "date_unixtime": "1777536678",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nNTBK * | 91 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nNTBK * | 91 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461620,
+   "type": "message",
+   "date": "2026-04-30T15:11:23",
+   "date_unixtime": "1777536683",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nADRO * | 2500 | +1 (Total: 9.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nADRO * | 2500 | +1 (Total: 9.0)"
+    }
+   ]
+  },
+  {
+   "id": 461623,
+   "type": "message",
+   "date": "2026-04-30T15:12:24",
+   "date_unixtime": "1777536744",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nTRIS * | 186 | +6 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nTRIS * | 186 | +6 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461628,
+   "type": "message",
+   "date": "2026-04-30T15:15:01",
+   "date_unixtime": "1777536901",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nKAEF | 476 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nKAEF | 476 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461633,
+   "type": "message",
+   "date": "2026-04-30T15:18:20",
+   "date_unixtime": "1777537100",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBREN | 4460 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBREN | 4460 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461635,
+   "type": "message",
+   "date": "2026-04-30T15:18:21",
+   "date_unixtime": "1777537101",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nCPIN * | 4030 | +1 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nCPIN * | 4030 | +1 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461637,
+   "type": "message",
+   "date": "2026-04-30T15:19:04",
+   "date_unixtime": "1777537144",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSMRA * | 310 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSMRA * | 310 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461642,
+   "type": "message",
+   "date": "2026-04-30T15:20:04",
+   "date_unixtime": "1777537204",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAMMN | 5200 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAMMN | 5200 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461647,
+   "type": "message",
+   "date": "2026-04-30T15:21:21",
+   "date_unixtime": "1777537281",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nMLBI | 5800 | +6 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nMLBI | 5800 | +6 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461654,
+   "type": "message",
+   "date": "2026-04-30T15:25:04",
+   "date_unixtime": "1777537504",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nKAQI * | 114 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nKAQI * | 114 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461656,
+   "type": "message",
+   "date": "2026-04-30T15:25:22",
+   "date_unixtime": "1777537522",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSOTS * | 1050 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSOTS * | 1050 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461660,
+   "type": "message",
+   "date": "2026-04-30T15:27:01",
+   "date_unixtime": "1777537621",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAXIO * | 117 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAXIO * | 117 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461665,
+   "type": "message",
+   "date": "2026-04-30T15:29:22",
+   "date_unixtime": "1777537762",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBUMI * | 242 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBUMI * | 242 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461669,
+   "type": "message",
+   "date": "2026-04-30T15:30:47",
+   "date_unixtime": "1777537847",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nCASA | 1350 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nCASA | 1350 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461671,
+   "type": "message",
+   "date": "2026-04-30T15:30:49",
+   "date_unixtime": "1777537849",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nHEAL * | 1135 | +1 (Total: 2.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nHEAL * | 1135 | +1 (Total: 2.0)"
+    }
+   ]
+  },
+  {
+   "id": 461673,
+   "type": "message",
+   "date": "2026-04-30T15:31:24",
+   "date_unixtime": "1777537884",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nTUGU | 1270 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nTUGU | 1270 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461674,
+   "type": "message",
+   "date": "2026-04-30T15:32:21",
+   "date_unixtime": "1777537941",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nCPIN * | 4050 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nCPIN * | 4050 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461676,
+   "type": "message",
+   "date": "2026-04-30T15:32:38",
+   "date_unixtime": "1777537958",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nMINA * | 338 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nMINA * | 338 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461678,
+   "type": "message",
+   "date": "2026-04-30T15:33:04",
+   "date_unixtime": "1777537984",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nMINA * | 342 | +1 (Total: 4.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nMINA * | 342 | +1 (Total: 4.0)"
+    }
+   ]
+  },
+  {
+   "id": 461679,
+   "type": "message",
+   "date": "2026-04-30T15:33:05",
+   "date_unixtime": "1777537985",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 15:33:04\n📊 Data   : 94\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  7   AYAM*    12.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  10  SDMU     10.0   95     115     21.1%  TRANSPORTATION & LOGISTIC\n4  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n5  4   SRSN     9.0    70     70       0.0%  OTHERS\n6  4   PADI     9.0    110    113      2.7%  FINANCIAL\n7  9   ADRO*    9.0    2450   2500     2.0%  ENERGY\n8  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n9  3   TRIS*    8.0    190    186     -2.1%  CYCLICAL\n10 3   NTBK*    8.0    85     91       7.1%  OTHERS\n11 3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n12 3   INDO     8.0    160    160      0.0%  PROPERTY\n13 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n14 8   BUMI*    8.0    234    242      3.4%  ENERGY\n15 3   BSML*    8.0    404    402     -0.5%  ENERGY\n16 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n17 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n18 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n19 7   CPIN*    7.0    4020   4050     0.7%  NON CYCLICAL\n20 2   BTPS*    7.0    980    985      0.5%  KONGLO\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": NON CYCLICAL\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 15:33:04\n📊 Data   : 94\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  7   AYAM*    12.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  10  SDMU     10.0   95     115     21.1%  TRANSPORTATION & LOGISTIC\n4  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n5  4   SRSN     9.0    70     70       0.0%  OTHERS\n6  4   PADI     9.0    110    113      2.7%  FINANCIAL\n7  9   ADRO*    9.0    2450   2500     2.0%  ENERGY\n8  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n9  3   TRIS*    8.0    190    186     -2.1%  CYCLICAL\n10 3   NTBK*    8.0    85     91       7.1%  OTHERS\n11 3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n12 3   INDO     8.0    160    160      0.0%  PROPERTY\n13 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n14 8   BUMI*    8.0    234    242      3.4%  ENERGY\n15 3   BSML*    8.0    404    402     -0.5%  ENERGY\n16 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n17 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n18 2   MSKY*    7.0    88     91       3.4%  CYCLICAL\n19 7   CPIN*    7.0    4020   4050     0.7%  NON CYCLICAL\n20 2   BTPS*    7.0    980    985      0.5%  KONGLO\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": NON CYCLICAL\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461683,
+   "type": "message",
+   "date": "2026-04-30T15:34:02",
+   "date_unixtime": "1777538042",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nICON * | 139 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nICON * | 139 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461684,
+   "type": "message",
+   "date": "2026-04-30T15:34:23",
+   "date_unixtime": "1777538063",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede 🔥🔥🔥\nWINS * | 565 | +6 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede 🔥🔥🔥\nWINS * | 565 | +6 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461686,
+   "type": "message",
+   "date": "2026-04-30T15:34:43",
+   "date_unixtime": "1777538083",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nFILM * | 2400 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nFILM * | 2400 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461688,
+   "type": "message",
+   "date": "2026-04-30T15:35:01",
+   "date_unixtime": "1777538101",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nHEAL * | 1200 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nHEAL * | 1200 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461690,
+   "type": "message",
+   "date": "2026-04-30T15:35:21",
+   "date_unixtime": "1777538121",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nAYAM * | 336 | +1 (Total: 13.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nAYAM * | 336 | +1 (Total: 13.0)"
+    }
+   ]
+  },
+  {
+   "id": 461692,
+   "type": "message",
+   "date": "2026-04-30T15:35:23",
+   "date_unixtime": "1777538123",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 428 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 428 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461695,
+   "type": "message",
+   "date": "2026-04-30T15:36:45",
+   "date_unixtime": "1777538205",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nGGRP * | 290 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nGGRP * | 290 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461697,
+   "type": "message",
+   "date": "2026-04-30T15:37:01",
+   "date_unixtime": "1777538221",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 428 | +1 (Total: 4.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 428 | +1 (Total: 4.0)"
+    }
+   ]
+  },
+  {
+   "id": 461699,
+   "type": "message",
+   "date": "2026-04-30T15:37:18",
+   "date_unixtime": "1777538238",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nKAQI * | 113 | +1 (Total: 3.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nKAQI * | 113 | +1 (Total: 3.0)"
+    }
+   ]
+  },
+  {
+   "id": 461702,
+   "type": "message",
+   "date": "2026-04-30T15:38:23",
+   "date_unixtime": "1777538303",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nDEWI * | 126 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nDEWI * | 126 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461704,
+   "type": "message",
+   "date": "2026-04-30T15:38:43",
+   "date_unixtime": "1777538323",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBLES * | 163 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBLES * | 163 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461707,
+   "type": "message",
+   "date": "2026-04-30T15:39:01",
+   "date_unixtime": "1777538341",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 432 | +1 (Total: 5.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 432 | +1 (Total: 5.0)"
+    }
+   ]
+  },
+  {
+   "id": 461710,
+   "type": "message",
+   "date": "2026-04-30T15:39:23",
+   "date_unixtime": "1777538363",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 430 | +1 (Total: 6.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 430 | +1 (Total: 6.0)"
+    }
+   ]
+  },
+  {
+   "id": 461713,
+   "type": "message",
+   "date": "2026-04-30T15:40:23",
+   "date_unixtime": "1777538423",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSMSM * | 1840 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSMSM * | 1840 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461716,
+   "type": "message",
+   "date": "2026-04-30T15:41:05",
+   "date_unixtime": "1777538465",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal SIRKUIT P\nINDS * | 426 | +1 (Total: 7.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal SIRKUIT P\nINDS * | 426 | +1 (Total: 7.0)"
+    }
+   ]
+  },
+  {
+   "id": 461721,
+   "type": "message",
+   "date": "2026-04-30T15:42:41",
+   "date_unixtime": "1777538561",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBBCA | 5900 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBBCA | 5900 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461724,
+   "type": "message",
+   "date": "2026-04-30T15:43:01",
+   "date_unixtime": "1777538581",
+   "edited": "2026-04-30T15:50:12",
+   "edited_unixtime": "1777539012",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 434 | +1 (Total: 8.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 434 | +1 (Total: 8.0)"
+    }
+   ]
+  },
+  {
+   "id": 461725,
+   "type": "message",
+   "date": "2026-04-30T15:43:20",
+   "date_unixtime": "1777538600",
+   "edited": "2026-04-30T15:49:57",
+   "edited_unixtime": "1777538997",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nSHIP * | 3750 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nSHIP * | 3750 | +1 (Total: 1.0)"
+    }
+   ],
+   "reactions": [
+    {
+     "type": "emoji",
+     "count": 2,
+     "emoji": "❤",
+     "recent": [
+      {
+       "from": "Ado",
+       "from_id": "user5053378221",
+       "date": "2026-04-30T16:38:21"
+      },
+      {
+       "from": "Olivia",
+       "from_id": "user1403991776",
+       "date": "2026-04-30T15:49:57"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 461728,
+   "type": "message",
+   "date": "2026-04-30T15:43:40",
+   "date_unixtime": "1777538620",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nNANO | 38 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nNANO | 38 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461731,
+   "type": "message",
+   "date": "2026-04-30T15:44:03",
+   "date_unixtime": "1777538643",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nINDS * | 450 | +1 (Total: 9.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nINDS * | 450 | +1 (Total: 9.0)"
+    }
+   ]
+  },
+  {
+   "id": 461738,
+   "type": "message",
+   "date": "2026-04-30T15:46:44",
+   "date_unixtime": "1777538804",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nTLKM * | 2840 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nTLKM * | 2840 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461750,
+   "type": "message",
+   "date": "2026-04-30T15:50:21",
+   "date_unixtime": "1777539021",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": "Signal Uang Gede\nBBHI | 1280 | +1 (Total: 1.0)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Signal Uang Gede\nBBHI | 1280 | +1 (Total: 1.0)"
+    }
+   ]
+  },
+  {
+   "id": 461752,
+   "type": "message",
+   "date": "2026-04-30T15:50:22",
+   "date_unixtime": "1777539022",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 15:50:21\n📊 Data   : 98\n\n",
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  8   AYAM*    13.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  10  SDMU     10.0   95     115     21.1%  TRANSPORTATION & LOGISTIC\n4  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n5  4   SRSN     9.0    70     70       0.0%  OTHERS\n6  4   PADI     9.0    110    113      2.7%  FINANCIAL\n7  9   INDS*    9.0    394    450     14.2%  CYCLICAL\n8  9   ADRO*    9.0    2450   2500     2.0%  ENERGY\n9  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n10 3   TRIS*    8.0    190    186     -2.1%  CYCLICAL\n11 3   NTBK*    8.0    85     91       7.1%  OTHERS\n12 3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n13 3   INDO     8.0    160    160      0.0%  PROPERTY\n14 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n15 8   BUMI*    8.0    234    242      3.4%  ENERGY\n16 3   BSML*    8.0    404    402     -0.5%  ENERGY\n17 3   BBCA     8.0    5875   5900     0.4%  KONGLO\n18 2   WINS*    7.0    575    565     -1.7%  ENERGY\n19 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n20 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n",
+     "language": ""
+    },
+    "\n🔥 ",
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    ": ENERGY\n⚠️ ",
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🚀 REKAP SIGNAL Illusix 2026-04-30\n\n🕒 Update : 15:50:21\n📊 Data   : 98\n\n"
+    },
+    {
+     "type": "pre",
+     "text": "\nNO FREK EMITEN   SCORE  AWAL   AKHIR  GAIN%  SEKTOR\n-------------------------------------------------------------\n1  8   AYAM*    13.0   332    336      1.2%  NON CYCLICAL\n2  6   GGRM     11.0   16125  17000    5.4%  NON CYCLICAL\n3  10  SDMU     10.0   95     115     21.1%  TRANSPORTATION & LOGISTIC\n4  4   TMPO*    9.0    138    150      8.7%  CYCLICAL\n5  4   SRSN     9.0    70     70       0.0%  OTHERS\n6  4   PADI     9.0    110    113      2.7%  FINANCIAL\n7  9   INDS*    9.0    394    450     14.2%  CYCLICAL\n8  9   ADRO*    9.0    2450   2500     2.0%  ENERGY\n9  4   AADI*    9.0    11425  11575    1.3%  ENERGY\n10 3   TRIS*    8.0    190    186     -2.1%  CYCLICAL\n11 3   NTBK*    8.0    85     91       7.1%  OTHERS\n12 3   MSJA*    8.0    505    515      2.0%  NON CYCLICAL\n13 3   INDO     8.0    160    160      0.0%  PROPERTY\n14 8   DMAS*    8.0    137    140      2.2%  PROPERTY\n15 8   BUMI*    8.0    234    242      3.4%  ENERGY\n16 3   BSML*    8.0    404    402     -0.5%  ENERGY\n17 3   BBCA     8.0    5875   5900     0.4%  KONGLO\n18 2   WINS*    7.0    575    565     -1.7%  ENERGY\n19 2   TRUE*    7.0    153    150     -2.0%  PROPERTY\n20 2   SONA*    7.0    2780   2780     0.0%  CYCLICAL\n",
+     "language": ""
+    },
+    {
+     "type": "plain",
+     "text": "\n🔥 "
+    },
+    {
+     "type": "bold",
+     "text": "HOT SECTOR"
+    },
+    {
+     "type": "plain",
+     "text": ": ENERGY\n⚠️ "
+    },
+    {
+     "type": "bold",
+     "text": "Pesan"
+    },
+    {
+     "type": "plain",
+     "text": ": Cek Bid-Offer & Chart dan gunakan MM sebelum eksekusi.\n© 2026 RLA Community | Resilience, Learning, Adaptability"
+    }
+   ]
+  },
+  {
+   "id": 461762,
+   "type": "message",
+   "date": "2026-04-30T16:00:00",
+   "date_unixtime": "1777539600",
+   "edited": "2026-04-30T16:00:40",
+   "edited_unixtime": "1777539640",
+   "from": "MasBotaxx",
+   "from_id": "user8676985576",
+   "reply_to_message_id": 449371,
+   "text": [
+    "🌆 ",
+    {
+     "type": "bold",
+     "text": "PANTUN OM BOTAK CLOSING"
+    },
+    " 🌆\n\nPergi pagi ke pasar lama,\nAngin sejuk terasa nyaman.\nMarket hari ini cukup aktif,\nRisk management nomor satu."
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "🌆 "
+    },
+    {
+     "type": "bold",
+     "text": "PANTUN OM BOTAK CLOSING"
+    },
+    {
+     "type": "plain",
+     "text": " 🌆\n\nPergi pagi ke pasar lama,\nAngin sejuk terasa nyaman.\nMarket hari ini cukup aktif,\nRisk management nomor satu."
+    }
+   ],
+   "reactions": [
+    {
+     "type": "emoji",
+     "count": 8,
+     "emoji": "❤",
+     "recent": [
+      {
+       "from": "Astuti",
+       "from_id": "user1786166897",
+       "date": "2026-04-30T17:35:29"
+      },
+      {
+       "from": "Rialukman",
+       "from_id": "user1830205298",
+       "date": "2026-04-30T17:13:50"
+      },
+      {
+       "from": "Yuliant88 A074",
+       "from_id": "user814160158",
+       "date": "2026-04-30T16:38:27"
+      }
+     ]
     }
    ]
   }
