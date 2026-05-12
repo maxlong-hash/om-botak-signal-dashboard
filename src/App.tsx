@@ -49,8 +49,182 @@ import {
 
 type SortMode = "conviction" | "signals" | "total" | "first";
 type EdgeSortMode = "edge" | "samples" | "move" | "up" | "return" | "runup" | "drawdown";
+type MasterPreset = "all" | "smart-money" | "momentum" | "closing" | "accumulation";
+type SetupStrategyId = "final-haka" | "precision-breakout" | "flow-scalping";
+type SetupStrategyFilter = "all" | SetupStrategyId;
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/result.json`;
+
+const LIST_ALGO_MASTER = [
+  "SSE SELECTION",
+  "YANG PASTI PASTI AJA",
+  "SAHAM TREND JALAN",
+  "Breakout + Bandar",
+  "BULLISH TAMARA",
+  "BSJP V2 PRO FLOW",
+  "20% Flipper Momentum",
+  "AKUM10 Hari",
+  "SUPER ACCUMULATION",
+  "OPEN=LOW MOMENTUM BLAST",
+  "PULLBACK",
+  "CORE SMART MOMENTUM 2",
+  "TREND FOLLOW OPTIMIZED",
+  "SMART MONEY DOMINANT",
+  "BREAKOUT SMART MONEY PRO",
+  "BULLISH ENGULFING LIVE",
+  "CUAN TREND",
+  "STRUCTURAL PULLBACK PRO WITH INFLOW",
+  "SMART FLOW MOMENTUM",
+  "MOMENTUM LIQUID VOLUME BURST",
+  "OVERNIGHT TREND FOLLOW",
+  "BREAKOUT SMART MONEY EARLY",
+  "SWING MOMENTUM PRO",
+  "EARLY ACCUMULATION",
+  "FLOW MOMENTUM CONTINUE",
+  "SMART FLOW TREND BREAKOUT",
+  "STRONG CLOSING PRO",
+  "Uang Gede",
+  "Uang Lumayan",
+  "SIRKUIT",
+  "SIRKUIT P",
+] as const;
+
+const MASTER_ALGO_ALIAS: Record<string, (typeof LIST_ALGO_MASTER)[number]> = {
+  "UANG GEDEEEE": "Uang Gede",
+  "YANG PASTI AJA": "YANG PASTI PASTI AJA",
+  "CORE SMART MOMENTUM": "CORE SMART MOMENTUM 2",
+  "STRUCTURAL PULLBACK PRO": "STRUCTURAL PULLBACK PRO WITH INFLOW",
+};
+
+const MASTER_ALGO_LOOKUP = new Map(LIST_ALGO_MASTER.map((name) => [normalizeAlgoName(name), name]));
+const MASTER_ALGO_CODE_LOOKUP = new Map(LIST_ALGO_MASTER.map((name, index) => [normalizeAlgoName(name), index + 1]));
+
+const MASTER_PRESETS: Array<{ value: MasterPreset; label: string }> = [
+  { value: "all", label: "Semua master" },
+  { value: "smart-money", label: "Smart money" },
+  { value: "momentum", label: "Momentum" },
+  { value: "closing", label: "Closing watch" },
+  { value: "accumulation", label: "Accumulation" },
+];
+
+const MASTER_PRESET_ALGOS: Record<Exclude<MasterPreset, "all">, string[]> = {
+  "smart-money": ["SMART MONEY DOMINANT", "BREAKOUT SMART MONEY PRO", "BREAKOUT SMART MONEY EARLY", "Uang Gede", "Breakout + Bandar"],
+  momentum: ["SMART FLOW MOMENTUM", "MOMENTUM LIQUID VOLUME BURST", "SWING MOMENTUM PRO", "FLOW MOMENTUM CONTINUE", "SMART FLOW TREND BREAKOUT", "20% Flipper Momentum"],
+  closing: ["STRONG CLOSING PRO", "OVERNIGHT TREND FOLLOW", "TREND FOLLOW OPTIMIZED"],
+  accumulation: ["EARLY ACCUMULATION", "SUPER ACCUMULATION", "AKUM10 Hari", "PULLBACK", "STRUCTURAL PULLBACK PRO WITH INFLOW"],
+};
+
+const SETUP_STRATEGY_OPTIONS: Array<{ value: SetupStrategyFilter; label: string }> = [
+  { value: "all", label: "Semua setup" },
+  { value: "final-haka", label: "Final Haka" },
+  { value: "precision-breakout", label: "Precision Breakout" },
+  { value: "flow-scalping", label: "Flow Scalping" },
+];
+
+interface SetupStrategyDefinition {
+  id: SetupStrategyId;
+  name: string;
+  subtitle: string;
+  watchlistCodes: number[];
+  entryCodes: number[];
+  supportCodes: number[];
+  addCodes: number[];
+  holdCodes: number[];
+  takeProfit: string;
+  cutLoss: string;
+  outRule: string;
+}
+
+const SETUP_STRATEGIES: SetupStrategyDefinition[] = [
+  {
+    id: "final-haka",
+    name: "Final Haka",
+    subtitle: "Watchlist -> Entry -> Tambah/Tahan",
+    watchlistCodes: [28, 29, 30],
+    entryCodes: [4, 12],
+    supportCodes: [],
+    addCodes: [25, 26],
+    holdCodes: [25, 26],
+    takeProfit: "+5% s/d +10%",
+    cutLoss: "-8%",
+    outRule: "OUT jika >2 hari tidak ada 25/26",
+  },
+  {
+    id: "precision-breakout",
+    name: "Precision Breakout",
+    subtitle: "28/29/30 + penguat + 4",
+    watchlistCodes: [28, 29, 30],
+    entryCodes: [4],
+    supportCodes: [6, 15, 19, 22, 23, 27],
+    addCodes: [],
+    holdCodes: [25, 26, 27, 30],
+    takeProfit: "+3% amankan, +5% s/d +8% target",
+    cutLoss: "-5%",
+    outRule: "Hold hanya jika 25/26/27/30 masih ada",
+  },
+  {
+    id: "flow-scalping",
+    name: "Flow Scalping",
+    subtitle: "19 + 15 atau 23",
+    watchlistCodes: [],
+    entryCodes: [19],
+    supportCodes: [15, 23],
+    addCodes: [],
+    holdCodes: [],
+    takeProfit: "+1.5% s/d +3%",
+    cutLoss: "-2% s/d -3%",
+    outRule: "Jika tidak jalan cepat: OUT",
+  },
+];
+
+interface MasterScreenerRow {
+  ticker: string;
+  score: number;
+  algoCount: number;
+  signalCount: number;
+  rawCount: number;
+  maxTotal: number;
+  scoreSum: number;
+  latestSignal: SignalEvent;
+  firstPrice: number;
+  lastPrice: number;
+  pricedEventCount: number;
+  priceChangePct: number;
+  freshness: string;
+  status: string[];
+  algos: string[];
+}
+
+interface MasterCoverage {
+  matchedSignals: number;
+  unmatchedSignals: number;
+  matchedAlgos: number;
+  missingAlgos: string[];
+}
+
+interface SetupStrategyRow {
+  strategyId: SetupStrategyId;
+  strategyName: string;
+  ticker: string;
+  score: number;
+  stage: string;
+  action: string;
+  latestSignal: SignalEvent;
+  signalCount: number;
+  rawCount: number;
+  maxTotal: number;
+  priceChangePct: number;
+  pricedEventCount: number;
+  freshness: string;
+  activeCodes: number[];
+  missingCodes: number[];
+  watchlistCodes: number[];
+  entryCodes: number[];
+  supportCodes: number[];
+  addCodes: number[];
+  status: string[];
+  exitRules: string[];
+}
 
 export default function App() {
   const [dataset, setDataset] = useState<ReturnType<typeof parseTelegramExport> | null>(null);
@@ -66,6 +240,8 @@ export default function App() {
   const [movementThreshold, setMovementThreshold] = useState(2);
   const [minEdgeSamples, setMinEdgeSamples] = useState(1);
   const [edgeSortMode, setEdgeSortMode] = useState<EdgeSortMode>("edge");
+  const [masterPreset, setMasterPreset] = useState<MasterPreset>("all");
+  const [setupStrategyFilter, setSetupStrategyFilter] = useState<SetupStrategyFilter>("all");
   const [sortMode, setSortMode] = useState<SortMode>("conviction");
   const [selectedTicker, setSelectedTicker] = useState("");
   const [detailOpen, setDetailOpen] = useState(false);
@@ -127,6 +303,14 @@ export default function App() {
   }, [category, dateScopedSignals, minTotal, query, session]);
 
   const tickerStats = useMemo(() => buildTickerStats(filteredSignals), [filteredSignals]);
+  const setupStrategyRows = useMemo(() => buildSetupStrategyRows(filteredSignals), [filteredSignals]);
+  const visibleSetupStrategyRows = useMemo(() => {
+    return setupStrategyFilter === "all"
+      ? setupStrategyRows
+      : setupStrategyRows.filter((row) => row.strategyId === setupStrategyFilter);
+  }, [setupStrategyFilter, setupStrategyRows]);
+  const masterCoverage = useMemo(() => buildMasterCoverage(filteredSignals), [filteredSignals]);
+  const masterScreenerRows = useMemo(() => buildMasterScreenerRows(filteredSignals, masterPreset), [filteredSignals, masterPreset]);
 
   const selectedStat = useMemo(() => {
     if (!selectedTicker) return tickerStats[0];
@@ -213,6 +397,8 @@ export default function App() {
     setCategory("all");
     setSession("all");
     setMinTotal(0);
+    setMasterPreset("all");
+    setSetupStrategyFilter("all");
     setSelectedTicker("");
     setDetailOpen(false);
     setSelectedEdgeName("");
@@ -391,6 +577,48 @@ export default function App() {
         <div className="panel span-4">
           <PanelHeader icon={<Target />} title="Signal Mix" />
           <BarList stats={signalMix} />
+        </div>
+
+        <div className="panel span-12">
+          <PanelHeader
+            icon={<Target />}
+            title="Setup Strategy Screener"
+            aside={
+              <div className="edge-controls">
+                <FilterSelect
+                  icon={<SlidersHorizontal size={16} />}
+                  value={setupStrategyFilter}
+                  options={SETUP_STRATEGY_OPTIONS}
+                  onChange={(value) => setSetupStrategyFilter(value as SetupStrategyFilter)}
+                />
+              </div>
+            }
+          />
+          <SetupStrategyScreener
+            rows={visibleSetupStrategyRows}
+            allRows={setupStrategyRows}
+            selectedStrategy={setupStrategyFilter}
+            onStrategyChange={setSetupStrategyFilter}
+            onPickTicker={pickTicker}
+          />
+        </div>
+
+        <div className="panel span-12">
+          <PanelHeader
+            icon={<Sparkles />}
+            title="Master Algo Screener"
+            aside={
+              <div className="edge-controls">
+                <FilterSelect
+                  icon={<SlidersHorizontal size={16} />}
+                  value={masterPreset}
+                  options={MASTER_PRESETS}
+                  onChange={(value) => setMasterPreset(value as MasterPreset)}
+                />
+              </div>
+            }
+          />
+          <MasterAlgoScreener rows={masterScreenerRows} coverage={masterCoverage} onPickTicker={pickTicker} />
         </div>
 
         <div className="panel span-12">
@@ -875,6 +1103,639 @@ function PriceMovers({ stats, onPick }: { stats: TickerStat[]; onPick: (ticker: 
   );
 }
 
+function SetupStrategyScreener({
+  rows,
+  allRows,
+  selectedStrategy,
+  onStrategyChange,
+  onPickTicker,
+}: {
+  rows: SetupStrategyRow[];
+  allRows: SetupStrategyRow[];
+  selectedStrategy: SetupStrategyFilter;
+  onStrategyChange: (strategy: SetupStrategyFilter) => void;
+  onPickTicker: (ticker: string) => void;
+}) {
+  const visibleRows = rows.slice(0, 24);
+  const summaries = SETUP_STRATEGIES.map((strategy) => {
+    const strategyRows = allRows.filter((row) => row.strategyId === strategy.id);
+    const readyRows = strategyRows.filter((row) => row.stage === "Entry Ready" || row.stage === "Add/Hold");
+    return {
+      strategy,
+      rows: strategyRows,
+      readyRows,
+      top: strategyRows[0],
+    };
+  });
+  const selectedDefinition =
+    selectedStrategy === "all" ? null : SETUP_STRATEGIES.find((strategy) => strategy.id === selectedStrategy) || null;
+
+  if (!allRows.length) return <EmptyState text="Belum ada saham yang cocok dengan setup strategi." />;
+
+  return (
+    <div className="setup-screener">
+      <div className="setup-cards">
+        {summaries.map(({ strategy, rows: strategyRows, readyRows, top }, index) => (
+          <button
+            className={`setup-card ${selectedStrategy === strategy.id ? "active" : ""}`}
+            key={strategy.id}
+            onClick={() => onStrategyChange(strategy.id)}
+          >
+            <span className="rank">{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <strong>{strategy.name}</strong>
+              <small>{strategy.subtitle}</small>
+            </div>
+            <b>{readyRows.length}</b>
+            <p>
+              {strategyRows.length} kandidat{top ? ` - top ${top.ticker} (${top.stage})` : ""}
+            </p>
+          </button>
+        ))}
+      </div>
+
+      <div className="setup-rules">
+        {(selectedDefinition ? [selectedDefinition] : SETUP_STRATEGIES).map((strategy) => (
+          <div key={`rule-${strategy.id}`}>
+            <strong>{strategy.name}</strong>
+            <span>Watchlist {formatCodes(strategy.watchlistCodes) || "-"}</span>
+            <span>Entry {formatCodes(strategy.entryCodes)}</span>
+            <span>Support {formatCodes(strategy.supportCodes) || formatCodes(strategy.addCodes) || "-"}</span>
+            <span>TP {strategy.takeProfit}</span>
+            <span>CL {strategy.cutLoss}</span>
+          </div>
+        ))}
+      </div>
+
+      {!visibleRows.length ? (
+        <EmptyState text="Tidak ada kandidat untuk filter setup ini." />
+      ) : (
+        <div className="setup-table-wrap">
+          <table className="setup-table">
+            <thead>
+              <tr>
+                <th>Setup</th>
+                <th>Ticker</th>
+                <th>Stage</th>
+                <th>Score</th>
+                <th>Aktif</th>
+                <th>Butuh</th>
+                <th>Latest</th>
+                <th>Return</th>
+                <th>Aksi</th>
+                <th>Exit Rule</th>
+              </tr>
+            </thead>
+            <tbody>
+              {visibleRows.map((row) => (
+                <tr key={`${row.strategyId}-${row.ticker}`}>
+                  <td>
+                    <span className="strategy-name">
+                      {row.strategyName}
+                      <small>{row.freshness}</small>
+                    </span>
+                  </td>
+                  <td>
+                    <button className="ticker-link" onClick={() => onPickTicker(row.ticker)}>
+                      {row.ticker}
+                    </button>
+                  </td>
+                  <td>
+                    <span className={`strategy-stage ${row.stage === "Entry Ready" || row.stage === "Add/Hold" ? "ready" : ""}`}>
+                      {row.stage}
+                    </span>
+                  </td>
+                  <td>
+                    <strong>{row.score}</strong>
+                    <small className="cell-note">total {row.maxTotal.toFixed(1)}</small>
+                  </td>
+                  <td>
+                    <CodeBadges codes={row.activeCodes} />
+                  </td>
+                  <td>
+                    <CodeBadges codes={row.missingCodes} muted />
+                  </td>
+                  <td>
+                    {row.latestSignal.tradeDate}
+                    <small className="cell-note">{row.latestSignal.signalTime}</small>
+                  </td>
+                  <td className={row.priceChangePct >= 0 ? "positive" : "negative"}>
+                    {row.pricedEventCount >= 2 ? formatPct(row.priceChangePct) : "-"}
+                  </td>
+                  <td>
+                    <strong>{row.action}</strong>
+                    <div className="status-tags">
+                      {row.status.map((item) => (
+                        <span key={`${row.strategyId}-${row.ticker}-${item}`}>{item}</span>
+                      ))}
+                    </div>
+                  </td>
+                  <td>
+                    <span className="exit-rule">{row.exitRules.join(" / ")}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function CodeBadges({ codes, muted = false }: { codes: number[]; muted?: boolean }) {
+  if (!codes.length) return <span className="code-empty">-</span>;
+  return (
+    <div className={`code-badges ${muted ? "muted" : ""}`}>
+      {codes.slice(0, 10).map((code) => (
+        <span key={code} title={formatAlgoCode(code)}>
+          {code}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function MasterAlgoScreener({
+  rows,
+  coverage,
+  onPickTicker,
+}: {
+  rows: MasterScreenerRow[];
+  coverage: MasterCoverage;
+  onPickTicker: (ticker: string) => void;
+}) {
+  const topRows = rows.slice(0, 18);
+
+  if (!topRows.length) return <EmptyState text="Belum ada signal yang cocok dengan master algo pada filter ini." />;
+
+  return (
+    <div className="master-screener">
+      <div className="master-overview">
+        <div>
+          <span>Signal master</span>
+          <strong>{formatCompact(coverage.matchedSignals)}</strong>
+          <small>{coverage.matchedAlgos}/{LIST_ALGO_MASTER.length} algo aktif</small>
+        </div>
+        <div>
+          <span>Di luar master</span>
+          <strong>{formatCompact(coverage.unmatchedSignals)}</strong>
+          <small>{coverage.missingAlgos.length ? `${coverage.missingAlgos.length} algo belum muncul` : "semua algo muncul"}</small>
+        </div>
+        <div>
+          <span>Kandidat</span>
+          <strong>{formatCompact(rows.length)}</strong>
+          <small>saham lolos screening</small>
+        </div>
+      </div>
+
+      <div className="master-cards">
+        {topRows.slice(0, 3).map((row, index) => (
+          <button className="master-card" key={`master-card-${row.ticker}`} onClick={() => onPickTicker(row.ticker)}>
+            <span className="rank">{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <strong>{row.ticker}</strong>
+              <small>
+                {row.algoCount} algo - {row.signalCount} signal - {row.freshness}
+              </small>
+            </div>
+            <b>{row.score}</b>
+            <p>{row.status.slice(0, 3).join(" / ")}</p>
+          </button>
+        ))}
+      </div>
+
+      <div className="master-table-wrap">
+        <table className="master-table">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Score</th>
+              <th>Algo</th>
+              <th>Signal</th>
+              <th>Fresh</th>
+              <th>Latest</th>
+              <th>Return</th>
+              <th>Status</th>
+              <th>Master Algo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topRows.map((row) => (
+              <tr key={row.ticker}>
+                <td>
+                  <button className="ticker-link" onClick={() => onPickTicker(row.ticker)}>
+                    {row.ticker}
+                  </button>
+                </td>
+                <td>
+                  <strong>{row.score}</strong>
+                  <small className="cell-note">total {row.maxTotal.toFixed(1)}</small>
+                </td>
+                <td>{row.algoCount}</td>
+                <td>{row.signalCount}</td>
+                <td>{row.freshness}</td>
+                <td>
+                  {row.latestSignal.tradeDate}
+                  <small className="cell-note">{row.latestSignal.signalTime}</small>
+                </td>
+                <td className={row.priceChangePct >= 0 ? "positive" : "negative"}>
+                  {row.pricedEventCount >= 2 ? formatPct(row.priceChangePct) : "-"}
+                </td>
+                <td>
+                  <div className="status-tags">
+                    {row.status.map((item) => (
+                      <span key={`${row.ticker}-${item}`}>{item}</span>
+                    ))}
+                  </div>
+                </td>
+                <td>
+                  <span className="algo-list">{row.algos.slice(0, 6).join(", ")}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function buildSetupStrategyRows(signals: SignalEvent[]): SetupStrategyRow[] {
+  const latestDate = signals.map((signal) => signal.tradeDate).sort().at(-1) || "";
+  const byTicker = new Map<string, SignalEvent[]>();
+
+  signals.forEach((signal) => {
+    const algo = getCanonicalMasterAlgo(signal.signalName);
+    if (!algo) return;
+    const list = byTicker.get(signal.ticker) || [];
+    list.push({ ...signal, signalName: algo });
+    byTicker.set(signal.ticker, list);
+  });
+
+  return Array.from(byTicker.entries())
+    .flatMap(([ticker, tickerSignals]) => {
+      const byCode = new Map<number, SignalEvent[]>();
+      tickerSignals.forEach((signal) => {
+        const code = getMasterAlgoCode(signal.signalName);
+        if (!code) return;
+        const list = byCode.get(code) || [];
+        list.push(signal);
+        byCode.set(code, list);
+      });
+
+      return SETUP_STRATEGIES.flatMap((strategy) => evaluateSetupStrategy(strategy, ticker, tickerSignals, byCode, latestDate));
+    })
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        stageRank(b.stage) - stageRank(a.stage) ||
+        b.maxTotal - a.maxTotal ||
+        a.strategyName.localeCompare(b.strategyName) ||
+        a.ticker.localeCompare(b.ticker),
+    );
+}
+
+function evaluateSetupStrategy(
+  strategy: SetupStrategyDefinition,
+  ticker: string,
+  tickerSignals: SignalEvent[],
+  byCode: Map<number, SignalEvent[]>,
+  latestDate: string,
+): SetupStrategyRow[] {
+  const watchlistCodes = activeCodes(strategy.watchlistCodes, byCode);
+  const entryCodes = activeCodes(strategy.entryCodes, byCode);
+  const supportCodes = activeCodes(strategy.supportCodes, byCode);
+  const addCodes = activeCodes(strategy.addCodes, byCode);
+  const holdCodes = activeCodes(strategy.holdCodes, byCode);
+  const active = unique([...watchlistCodes, ...entryCodes, ...supportCodes, ...addCodes]);
+
+  if (!active.length) return [];
+  if (strategy.id !== "flow-scalping" && !watchlistCodes.length && !entryCodes.length) return [];
+
+  const relevantSignals = getSignalsForCodes(active, byCode).sort(compareSignalDateTime);
+  const latestSignal = relevantSignals.at(-1) || relevantSignals[0];
+  if (!latestSignal) return [];
+
+  const priced = [...tickerSignals].filter(hasSignalPrice).sort(compareSignalDateTime);
+  const firstPrice = priced[0]?.price || 0;
+  const lastPrice = priced.at(-1)?.price || 0;
+  const priceChangePct = firstPrice && lastPrice ? ((lastPrice - firstPrice) / firstPrice) * 100 : 0;
+  const maxTotal = Math.max(...relevantSignals.map((signal) => signal.total));
+  const signalCount = relevantSignals.length;
+  const rawCount = sumNumber(relevantSignals.map((signal) => signal.duplicateCount));
+  const freshness = labelFreshness(latestSignal.tradeDate, latestDate);
+  const freshScore = freshness === "Fresh" ? 16 : freshness === "Watch" ? 9 : freshness === "Follow-up" ? 4 : -8;
+  const priceScore = priced.length >= 2 ? Math.max(-12, Math.min(18, priceChangePct * 1.4)) : 0;
+  const baseScore = active.length * 10 + signalCount * 1.8 + Math.min(34, maxTotal * 1.15) + Math.log(rawCount + 1) * 3 + freshScore + priceScore;
+
+  const detail = buildStrategyDecision(strategy, {
+    watchlistCodes,
+    entryCodes,
+    supportCodes,
+    addCodes,
+    holdCodes,
+    latestDate,
+    latestSignal,
+    priceChangePct,
+    pricedCount: priced.length,
+    byCode,
+  });
+
+  if (!detail) return [];
+
+  return [
+    {
+      strategyId: strategy.id,
+      strategyName: strategy.name,
+      ticker,
+      score: Number((baseScore + detail.stageScore).toFixed(1)),
+      stage: detail.stage,
+      action: detail.action,
+      latestSignal,
+      signalCount,
+      rawCount,
+      maxTotal,
+      priceChangePct,
+      pricedEventCount: priced.length,
+      freshness,
+      activeCodes: active,
+      missingCodes: detail.missingCodes,
+      watchlistCodes,
+      entryCodes,
+      supportCodes,
+      addCodes,
+      status: detail.status,
+      exitRules: [strategy.takeProfit, strategy.cutLoss, strategy.outRule],
+    },
+  ];
+}
+
+function buildStrategyDecision(
+  strategy: SetupStrategyDefinition,
+  context: {
+    watchlistCodes: number[];
+    entryCodes: number[];
+    supportCodes: number[];
+    addCodes: number[];
+    holdCodes: number[];
+    latestDate: string;
+    latestSignal: SignalEvent;
+    priceChangePct: number;
+    pricedCount: number;
+    byCode: Map<number, SignalEvent[]>;
+  },
+): { stage: string; action: string; missingCodes: number[]; status: string[]; stageScore: number } | null {
+  const hasWatchlist = context.watchlistCodes.length > 0;
+  const hasEntry = context.entryCodes.length > 0;
+  const hasSupport = context.supportCodes.length > 0;
+  const hasAdd = context.addCodes.length > 0;
+  const status: string[] = [];
+
+  if (context.latestSignal.tradeDate === context.latestDate) status.push("Fresh");
+  if (context.pricedCount >= 2 && context.priceChangePct > 0) status.push("Harga naik");
+
+  if (strategy.id === "final-haka") {
+    const latestAdd = getSignalsForCodes(strategy.addCodes, context.byCode).sort(compareSignalDateTime).at(-1);
+    const addTooOld = hasEntry && (!latestAdd || dayDiff(latestAdd.tradeDate, context.latestDate) > 2);
+
+    if (hasWatchlist) status.push("Watchlist 28/29/30");
+    if (hasEntry) status.push("Entry 4/12");
+    if (hasAdd) status.push("Tambah 25/26");
+    if (context.pricedCount >= 2 && context.priceChangePct >= 5) status.push("TP Zone");
+    if (context.pricedCount >= 2 && context.priceChangePct <= -8) status.push("CL Watch");
+    if (addTooOld) status.push("Exit Watch");
+
+    if (hasWatchlist && hasEntry && hasAdd) {
+      return { stage: "Add/Hold", action: "Tambah/Tahan", missingCodes: [], status: status.slice(0, 4), stageScore: 48 };
+    }
+    if (hasWatchlist && hasEntry) {
+      return { stage: "Entry Ready", action: "Entry awal", missingCodes: strategy.addCodes, status: status.slice(0, 4), stageScore: 38 };
+    }
+    if (hasWatchlist) {
+      return { stage: "Watchlist", action: "Pantau 4/12", missingCodes: strategy.entryCodes, status: status.slice(0, 4), stageScore: 18 };
+    }
+    if (hasEntry) {
+      return { stage: "Wait Confirm", action: "Butuh 28/29/30", missingCodes: strategy.watchlistCodes, status: status.slice(0, 4), stageScore: 8 };
+    }
+  }
+
+  if (strategy.id === "precision-breakout") {
+    if (hasWatchlist) status.push("Watchlist");
+    if (hasSupport) status.push("Penguat");
+    if (hasEntry) status.push("Breakout 4");
+    if (context.pricedCount >= 2 && context.priceChangePct >= 5) status.push("Target Utama");
+    else if (context.pricedCount >= 2 && context.priceChangePct >= 3) status.push("Amankan");
+    if (context.pricedCount >= 2 && context.priceChangePct <= -5) status.push("CL Watch");
+    if (context.holdCodes.length) status.push("Hold Valid");
+
+    if (hasWatchlist && hasSupport && hasEntry) {
+      return { stage: "Entry Ready", action: "Precision Buy", missingCodes: [], status: status.slice(0, 4), stageScore: 44 };
+    }
+    if (hasWatchlist && hasSupport) {
+      return { stage: "Wait Breakout", action: "Tunggu kode 4", missingCodes: strategy.entryCodes, status: status.slice(0, 4), stageScore: 30 };
+    }
+    if (hasWatchlist) {
+      return { stage: "Watchlist", action: "Cari penguat", missingCodes: strategy.supportCodes, status: status.slice(0, 4), stageScore: 17 };
+    }
+    if (hasEntry && hasSupport) {
+      return { stage: "Need Watchlist", action: "Butuh 28/29/30", missingCodes: strategy.watchlistCodes, status: status.slice(0, 4), stageScore: 13 };
+    }
+    if (hasEntry) {
+      return { stage: "Breakout Only", action: "Butuh konfirmasi", missingCodes: [...strategy.watchlistCodes, ...strategy.supportCodes], status: status.slice(0, 4), stageScore: 7 };
+    }
+  }
+
+  if (strategy.id === "flow-scalping") {
+    if (hasEntry) status.push("Flow 19");
+    if (hasSupport) status.push("Support 15/23");
+    if (context.pricedCount >= 2 && context.priceChangePct >= 3) status.push("TP Max");
+    else if (context.pricedCount >= 2 && context.priceChangePct >= 1.5) status.push("TP Scalp");
+    if (context.pricedCount >= 2 && context.priceChangePct <= -2) status.push("CL Scalp");
+    if (dayDiff(context.latestSignal.tradeDate, context.latestDate) >= 1) status.push("Jangan Hold Lama");
+
+    if (hasEntry && hasSupport) {
+      return { stage: "Entry Ready", action: "Flow Buy", missingCodes: [], status: status.slice(0, 4), stageScore: 36 };
+    }
+    if (hasEntry) {
+      return { stage: "Flow Watch", action: "Butuh 15/23", missingCodes: strategy.supportCodes, status: status.slice(0, 4), stageScore: 20 };
+    }
+    if (hasSupport) {
+      return { stage: "Wait Flow", action: "Butuh 19", missingCodes: strategy.entryCodes, status: status.slice(0, 4), stageScore: 9 };
+    }
+  }
+
+  return null;
+}
+
+function buildMasterCoverage(signals: SignalEvent[]): MasterCoverage {
+  const matchedAlgos = new Set<string>();
+  let matchedSignals = 0;
+  let unmatchedSignals = 0;
+
+  signals.forEach((signal) => {
+    const algo = getCanonicalMasterAlgo(signal.signalName);
+    if (algo) {
+      matchedAlgos.add(algo);
+      matchedSignals += signal.duplicateCount;
+    } else {
+      unmatchedSignals += signal.duplicateCount;
+    }
+  });
+
+  return {
+    matchedSignals,
+    unmatchedSignals,
+    matchedAlgos: matchedAlgos.size,
+    missingAlgos: LIST_ALGO_MASTER.filter((name) => !matchedAlgos.has(name)),
+  };
+}
+
+function buildMasterScreenerRows(signals: SignalEvent[], preset: MasterPreset): MasterScreenerRow[] {
+  const latestDate = signals.map((signal) => signal.tradeDate).sort().at(-1) || "";
+  const presetAlgos = preset === "all" ? null : new Set(MASTER_PRESET_ALGOS[preset]);
+  const byTicker = new Map<string, SignalEvent[]>();
+
+  signals.forEach((signal) => {
+    const algo = getCanonicalMasterAlgo(signal.signalName);
+    if (!algo || (presetAlgos && !presetAlgos.has(algo))) return;
+    const list = byTicker.get(signal.ticker) || [];
+    list.push({ ...signal, signalName: algo });
+    byTicker.set(signal.ticker, list);
+  });
+
+  return Array.from(byTicker.entries())
+    .map(([ticker, tickerSignals]) => {
+      const sorted = [...tickerSignals].sort((a, b) => a.signalDateTime.localeCompare(b.signalDateTime));
+      const latestSignal = sorted.at(-1) || sorted[0];
+      const algos = unique(sorted.map((signal) => signal.signalName));
+      const categories = unique(sorted.map((signal) => signal.category));
+      const priced = sorted.filter(hasSignalPrice);
+      const firstPrice = priced[0]?.price || 0;
+      const lastPrice = priced.at(-1)?.price || 0;
+      const priceChangePct = firstPrice && lastPrice ? ((lastPrice - firstPrice) / firstPrice) * 100 : 0;
+      const maxTotal = Math.max(...sorted.map((signal) => signal.total));
+      const scoreSum = sumNumber(sorted.map((signal) => signal.score));
+      const rawCount = sumNumber(sorted.map((signal) => signal.duplicateCount));
+      const freshness = labelFreshness(latestSignal.tradeDate, latestDate);
+      const status = buildMasterStatus(algos, freshness, priceChangePct, priced.length, maxTotal);
+      const freshnessScore = freshness === "Fresh" ? 18 : freshness === "Watch" ? 10 : freshness === "Follow-up" ? 4 : -6;
+      const priceScore = priced.length >= 2 ? Math.max(-10, Math.min(18, priceChangePct * 1.8)) : 0;
+      const score =
+        algos.length * 12 +
+        sorted.length * 1.8 +
+        Math.min(30, maxTotal * 1.25) +
+        categories.length * 3 +
+        Math.log(rawCount + 1) * 3 +
+        freshnessScore +
+        priceScore;
+
+      return {
+        ticker,
+        score: Number(score.toFixed(1)),
+        algoCount: algos.length,
+        signalCount: sorted.length,
+        rawCount,
+        maxTotal,
+        scoreSum,
+        latestSignal,
+        firstPrice,
+        lastPrice,
+        pricedEventCount: priced.length,
+        priceChangePct,
+        freshness,
+        status,
+        algos,
+      };
+    })
+    .sort((a, b) => b.score - a.score || b.algoCount - a.algoCount || b.signalCount - a.signalCount || a.ticker.localeCompare(b.ticker));
+}
+
+function getCanonicalMasterAlgo(signalName: string): string | null {
+  const normalized = normalizeAlgoName(signalName);
+  return MASTER_ALGO_ALIAS[normalized] || MASTER_ALGO_LOOKUP.get(normalized) || null;
+}
+
+function getMasterAlgoCode(signalName: string): number {
+  const canonical = getCanonicalMasterAlgo(signalName);
+  return canonical ? MASTER_ALGO_CODE_LOOKUP.get(normalizeAlgoName(canonical)) || 0 : 0;
+}
+
+function activeCodes(codes: number[], byCode: Map<number, SignalEvent[]>): number[] {
+  return codes.filter((code) => (byCode.get(code)?.length || 0) > 0);
+}
+
+function getSignalsForCodes(codes: number[], byCode: Map<number, SignalEvent[]>): SignalEvent[] {
+  return codes.flatMap((code) => byCode.get(code) || []);
+}
+
+function compareSignalDateTime(a: SignalEvent, b: SignalEvent): number {
+  return a.signalDateTime.localeCompare(b.signalDateTime) || a.ticker.localeCompare(b.ticker) || a.id - b.id;
+}
+
+function formatCodes(codes: number[]): string {
+  return codes.length ? codes.join("/") : "";
+}
+
+function formatAlgoCode(code: number): string {
+  const name = LIST_ALGO_MASTER[code - 1] || "Unknown";
+  return `${code} - ${name}`;
+}
+
+function stageRank(stage: string): number {
+  if (stage === "Add/Hold") return 5;
+  if (stage === "Entry Ready") return 4;
+  if (stage === "Wait Breakout" || stage === "Flow Watch") return 3;
+  if (stage === "Watchlist") return 2;
+  if (stage === "Need Watchlist" || stage === "Wait Confirm") return 1;
+  return 0;
+}
+
+function normalizeAlgoName(value: string): string {
+  return value.toUpperCase().replace(/[^A-Z0-9]+/g, " ").trim().replace(/\s+/g, " ");
+}
+
+function labelFreshness(signalDate: string, latestDate: string): string {
+  const age = dayDiff(signalDate, latestDate);
+  if (age <= 0) return "Fresh";
+  if (age === 1) return "Watch";
+  if (age <= 3) return "Follow-up";
+  return "Cooling";
+}
+
+function dayDiff(from: string, to: string): number {
+  const fromTime = Date.parse(`${from}T00:00:00`);
+  const toTime = Date.parse(`${to}T00:00:00`);
+  if (!Number.isFinite(fromTime) || !Number.isFinite(toTime)) return 0;
+  return Math.max(0, Math.round((toTime - fromTime) / 86_400_000));
+}
+
+function buildMasterStatus(algos: string[], freshness: string, priceChangePct: number, pricedCount: number, maxTotal: number): string[] {
+  const normalized = algos.map(normalizeAlgoName);
+  const hasAny = (terms: string[]) => normalized.some((algo) => terms.some((term) => algo.includes(term)));
+  const status: string[] = [];
+
+  if (freshness === "Fresh") status.push("Fresh Setup");
+  if (algos.length >= 6) status.push("Multi Algo");
+  if (hasAny(["SMART MONEY", "UANG GEDE", "BANDAR"])) status.push("Smart Money");
+  if (hasAny(["MOMENTUM", "SWING", "FLOW"])) status.push("Momentum");
+  if (hasAny(["CLOSING", "OVERNIGHT"])) status.push("Closing Watch");
+  if (hasAny(["ACCUM", "PULLBACK"])) status.push("Accumulation");
+  if (pricedCount >= 2 && priceChangePct >= 8) status.push("Late Move");
+  if (pricedCount >= 2 && priceChangePct <= -3) status.push("Cooling");
+  if (maxTotal >= 30) status.push("High Total");
+
+  return status.slice(0, 4).length ? status.slice(0, 4) : [freshness];
+}
+
+function unique<T>(items: T[]): T[] {
+  return Array.from(new Set(items));
+}
+
+function sumNumber(items: number[]): number {
+  return items.reduce((total, value) => total + value, 0);
+}
+
 function SignalEdgePanel({
   edges,
   onPickTicker,
@@ -1060,6 +1921,26 @@ function GuidePopout({ onClose }: { onClose: () => void }) {
               ["Kategori", "Membatasi signal berdasarkan kelompok setup seperti Smart Money, Momentum, Closing, Trend, dan lainnya."],
               ["Sesi", "Membatasi signal berdasarkan jam bursa: Opening, Sesi 1, Lunch, Sesi 2, Closing, atau After Market."],
               ["Min total", "Hanya menampilkan signal dengan nilai Total minimal sesuai angka yang kamu isi."],
+            ]}
+          />
+          <GuideBlock
+            title="Master Algo Screener"
+            items={[
+              ["Sumber", "Menggabungkan signal biasa dan REKAP SIGNAL Illusix yang memakai kode strategi 1-31 dari daftar master algo."],
+              ["Kandidat", "Saham diranking dari jumlah algo aktif, jumlah signal, total tertinggi, kategori, raw count, freshness, dan perubahan harga jika tersedia."],
+              ["Preset", "Pakai Smart money, Momentum, Closing watch, atau Accumulation untuk mempersempit saham sesuai gaya setup."],
+              ["Fresh", "Fresh berarti signal terakhir saham itu muncul pada tanggal signal terbaru di data. Watch dan Follow-up berarti sudah lewat beberapa hari."],
+              ["Status", "Tag seperti Multi Algo, Smart Money, Momentum, High Total, atau Late Move membantu membaca alasan saham masuk ranking."],
+            ]}
+          />
+          <GuideBlock
+            title="Setup Strategy Screener"
+            items={[
+              ["Final Haka", "Watchlist 28/29/30, entry awal 4 atau 12, tambah/tahan jika 25 atau 26 muncul. Exit watch jika lebih dari 2 hari tidak ada 25/26."],
+              ["Precision Breakout", "Cari 28/29/30, diperkuat 6/15/19/22/23/27, lalu entry ketika 4 muncul. Target utama +5% sampai +8%, CL -5%."],
+              ["Flow Scalping", "Setup cepat dari 19 dengan dukungan 15 atau 23. Target +1.5% sampai +3%, CL -2% sampai -3%, tidak untuk hold lama."],
+              ["Stage", "Entry Ready berarti rule utama sudah terpenuhi. Watchlist atau Wait berarti masih menunggu kode konfirmasi."],
+              ["Batasan", "TP/CL dihitung dari harga snapshot signal yang tersedia, bukan data OHLC resmi bursa."],
             ]}
           />
           <GuideBlock
@@ -1303,8 +2184,8 @@ function GuideBlock({ title, items }: { title: string; items: Array<[string, str
     <article className="guide-block">
       <h3>{title}</h3>
       <dl>
-        {items.map(([term, description]) => (
-          <div key={term}>
+        {items.map(([term, description], index) => (
+          <div key={`${term}-${index}`}>
             <dt>{term}</dt>
             <dd>{description}</dd>
           </div>

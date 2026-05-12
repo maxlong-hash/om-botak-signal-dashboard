@@ -1122,6 +1122,315 @@ button {
   gap: 14px;
 }
 
+.setup-screener {
+  display: grid;
+  gap: 14px;
+}
+
+.setup-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.setup-card {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(103, 213, 203, 0.24);
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(103, 213, 203, 0.07);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease,
+    background 0.16s ease;
+}
+
+.setup-card:hover,
+.setup-card.active {
+  border-color: rgba(103, 213, 203, 0.55);
+  background: rgba(103, 213, 203, 0.12);
+  transform: translateY(-1px);
+}
+
+.setup-card strong,
+.setup-card small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.setup-card small,
+.setup-card p {
+  color: var(--muted);
+}
+
+.setup-card > b {
+  color: var(--cyan);
+  font-size: 1.35rem;
+}
+
+.setup-card p {
+  grid-column: 2 / -1;
+  margin: -2px 0 0;
+  overflow: hidden;
+  font-size: 0.82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.setup-rules {
+  display: grid;
+  gap: 8px;
+}
+
+.setup-rules > div {
+  display: grid;
+  grid-template-columns: 160px repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  align-items: center;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.setup-rules strong,
+.setup-rules span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.setup-rules strong {
+  color: var(--cyan);
+}
+
+.setup-rules span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.setup-table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.setup-table {
+  min-width: 1180px;
+}
+
+.strategy-name {
+  display: grid;
+  gap: 3px;
+  min-width: 164px;
+}
+
+.strategy-name small {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.strategy-stage {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 9px;
+  border-radius: 8px;
+  color: var(--amber);
+  background: rgba(246, 184, 74, 0.12);
+  font-size: 0.78rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.strategy-stage.ready {
+  color: var(--ink);
+  background: var(--lime);
+}
+
+.code-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-width: 116px;
+}
+
+.code-badges span {
+  display: grid;
+  min-width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 7px;
+  color: var(--ink);
+  background: var(--cyan);
+  font-size: 0.74rem;
+  font-weight: 950;
+}
+
+.code-badges.muted span {
+  color: var(--muted);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.code-empty {
+  color: var(--muted);
+}
+
+.exit-rule {
+  display: block;
+  max-width: 330px;
+  overflow: hidden;
+  color: var(--muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.master-screener {
+  display: grid;
+  gap: 14px;
+}
+
+.master-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.master-overview > div {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.master-overview span,
+.master-overview small {
+  display: block;
+  overflow: hidden;
+  color: var(--muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.master-overview strong {
+  display: block;
+  margin: 3px 0;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.master-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.master-card {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(246, 184, 74, 0.24);
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(246, 184, 74, 0.075);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.master-card:hover {
+  border-color: rgba(246, 184, 74, 0.55);
+  transform: translateY(-1px);
+}
+
+.master-card strong,
+.master-card small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.master-card small,
+.master-card p {
+  color: var(--muted);
+}
+
+.master-card > b {
+  color: var(--lime);
+  font-size: 1.35rem;
+}
+
+.master-card p {
+  grid-column: 2 / -1;
+  margin: -2px 0 0;
+  overflow: hidden;
+  font-size: 0.82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.master-table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.master-table {
+  min-width: 1120px;
+}
+
+.cell-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.status-tags span {
+  min-height: 24px;
+  padding: 4px 7px;
+  border-radius: 6px;
+  color: var(--lime);
+  background: rgba(141, 228, 106, 0.12);
+  font-size: 0.72rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.algo-list {
+  display: block;
+  max-width: 360px;
+  overflow: hidden;
+  color: #e4decf;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .edge-layout {
   display: grid;
   gap: 14px;
@@ -1596,6 +1905,10 @@ tr:hover td {
 
   .price-kpis,
   .price-mover-grid,
+  .setup-cards,
+  .setup-rules > div,
+  .master-overview,
+  .master-cards,
   .edge-summary,
   .sample-kpis,
   .guide-grid {

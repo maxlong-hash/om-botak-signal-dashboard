@@ -138,12 +138,49 @@ export interface SignalEdgeSample {
 const SIGNAL_START = /Signal\b/i;
 const SIGNAL_TIME = /\[(\d{2}:\d{2}:\d{2})\]/;
 const SIGNAL_ROW =
-  /(?:^|[\r\n/])\s*([A-Z][A-Z0-9.-]{1,8})(?:\s*(\*))?\s*\|\s*(?:(\d[\d.,]*)\s*\|\s*)?([+-]?\d+(?:[.,]\d+)?)\s*\(Total:\s*([+-]?\d+(?:[.,]\d+)?)\)/gim;
+  /(?:^|[\r\n/])\s*([A-Z][A-Z0-9.-]{1,8})(?:\s*(\*))?\s*\|\s*(?:(\d[\d.,]*)\s*\|\s*)?([+-]?\d+(?:[.,]\d+)?)(?:\s*\(Total:\s*([+-]?\d+(?:[.,]\d+)?)\))?/gim;
+const REKAP_START = /REKAP SIGNAL/i;
+const REKAP_UPDATE_TIME = /Update\s*:\s*(\d{2}:\d{2}:\d{2})/i;
+const REKAP_ROW =
+  /^\s*\d+\s+(\d+)\s+([^\s]+)\s+([+-]?\d+(?:[.,]\d+)?)\s+([+-]?\d+(?:[.,]\d+)?)%\s*(?:\[[^\]]+\])?\s+([0-9][0-9,\s]*)\s*$/gim;
+const REKAP_ALGO_MASTER = [
+  "SSE SELECTION",
+  "YANG PASTI PASTI AJA",
+  "SAHAM TREND JALAN",
+  "Breakout + Bandar",
+  "BULLISH TAMARA",
+  "BSJP V2 PRO FLOW",
+  "20% Flipper Momentum",
+  "AKUM10 Hari",
+  "SUPER ACCUMULATION",
+  "OPEN=LOW MOMENTUM BLAST",
+  "PULLBACK",
+  "CORE SMART MOMENTUM 2",
+  "TREND FOLLOW OPTIMIZED",
+  "SMART MONEY DOMINANT",
+  "BREAKOUT SMART MONEY PRO",
+  "BULLISH ENGULFING LIVE",
+  "CUAN TREND",
+  "STRUCTURAL PULLBACK PRO WITH INFLOW",
+  "SMART FLOW MOMENTUM",
+  "MOMENTUM LIQUID VOLUME BURST",
+  "OVERNIGHT TREND FOLLOW",
+  "BREAKOUT SMART MONEY EARLY",
+  "SWING MOMENTUM PRO",
+  "EARLY ACCUMULATION",
+  "FLOW MOMENTUM CONTINUE",
+  "SMART FLOW TREND BREAKOUT",
+  "STRONG CLOSING PRO",
+  "Uang Gede",
+  "Uang Lumayan",
+  "SIRKUIT",
+  "SIRKUIT P",
+] as const;
 
 export function parseTelegramExport(data: TelegramExport): ParsedDataset {
   const messages = Array.isArray(data.messages) ? data.messages : [];
   const rawSignals = messages
-    .flatMap(parseSignalMessage)
+    .flatMap((message) => [...parseSignalMessage(message), ...parseRekapMessage(message)])
     .sort(compareSignals);
   const uniqueSignals = dedupeSignals(rawSignals);
   const dates = rawSignals.map((signal) => signal.tradeDate).sort();
@@ -198,7 +235,7 @@ function parseSignalMessage(message: TelegramMessage): SignalEvent[] {
     const hasPrice = Boolean(match[3]);
     const price = hasPrice ? parseNumber(match[3]) : 0;
     const score = parseNumber(match[4]);
-    const total = parseNumber(match[5]);
+    const total = match[5] ? parseNumber(match[5]) : score;
     const tags = classifyTags(signalName, starred);
     const duplicateKey = [
       datePart,
@@ -236,6 +273,80 @@ function parseSignalMessage(message: TelegramMessage): SignalEvent[] {
       duplicateCount: 1,
       rawMessageIds: [message.id],
     };
+  });
+}
+
+function parseRekapMessage(message: TelegramMessage): SignalEvent[] {
+  if (message.type !== "message" || !message.date) return [];
+  const text = getMessageText(message).trim();
+  if (!REKAP_START.test(text)) return [];
+
+  const rowMatches = Array.from(text.matchAll(REKAP_ROW));
+  if (!rowMatches.length) return [];
+
+  const datePart = message.date.slice(0, 10);
+  const messageTime = message.date.slice(11, 19) || "00:00:00";
+  const messageDate = message.date;
+  const signalTime = text.match(REKAP_UPDATE_TIME)?.[1] || messageTime;
+  const minutes = timeToMinutes(signalTime);
+  const signalDateTime = `${datePart}T${signalTime}`;
+
+  return rowMatches.flatMap((match) => {
+    const frequency = parseNumber(match[1]);
+    const rawTicker = match[2] || "";
+    const ticker = cleanRekapTicker(rawTicker);
+    if (!ticker) return [];
+
+    const total = parseNumber(match[3]);
+    const gainPct = parseNumber(match[4]);
+    const algoCodes = unique(
+      (match[5] || "")
+        .split(",")
+        .map((value) => Number(value.trim()))
+        .filter((value) => Number.isInteger(value) && value >= 1 && value <= REKAP_ALGO_MASTER.length),
+    );
+    if (!algoCodes.length) return [];
+
+    const starred = rawTicker.includes("*");
+    const score = total / algoCodes.length;
+
+    return algoCodes.map((code) => {
+      const signalName = REKAP_ALGO_MASTER[code - 1];
+      const category = classifyCategory(signalName);
+      const tags = classifyTags(signalName, starred);
+      if (frequency >= 8) tags.push("HIGH_FREQ");
+      if (gainPct >= 4) tags.push("FAST_GAIN");
+      tags.push("REKAP");
+      const duplicateKey = [datePart, ticker, signalName.toUpperCase(), "REKAP"].join("|");
+
+      return {
+        id: message.id,
+        tradeDate: datePart,
+        messageDate,
+        messageTime,
+        signalDateTime,
+        signalTime,
+        embeddedTime: true,
+        signalName,
+        rawSignalName: `REKAP ${signalName}`,
+        category,
+        tags,
+        ticker,
+        price: 0,
+        hasPrice: false,
+        score,
+        total,
+        starred,
+        session: classifySession(minutes),
+        minutes,
+        rawText: text,
+        sourceFrom: message.from || "-",
+        reactionCount: sumReactions(message),
+        duplicateKey,
+        duplicateCount: 1,
+        rawMessageIds: [message.id],
+      };
+    });
   });
 }
 
@@ -508,6 +619,14 @@ function cleanSignalName(raw: string): string {
     .trim();
 
   return withoutEmojiArtifacts || raw.replace(/\s+/g, " ").trim() || "UNKNOWN SIGNAL";
+}
+
+function cleanRekapTicker(raw: string): string {
+  return raw
+    .toUpperCase()
+    .replace(/\*/g, "")
+    .replace(/[^A-Z0-9.-]/g, "")
+    .trim();
 }
 
 function classifyCategory(signalName: string): SignalCategory {
