@@ -14,6 +14,21 @@ export interface TelegramExport {
   type?: string;
   id?: number;
   messages?: TelegramMessage[];
+  csvSignals?: CsvSignalRecord[];
+}
+
+export interface CsvSignalRecord {
+  id?: number;
+  ticker?: string;
+  emiten?: string;
+  signalName?: string;
+  algo?: string;
+  code?: number;
+  no?: number;
+  score?: number;
+  price?: number;
+  time?: string;
+  sourceFile?: string;
 }
 
 export interface SignalEvent {
@@ -179,8 +194,11 @@ const REKAP_ALGO_MASTER = [
 
 export function parseTelegramExport(data: TelegramExport): ParsedDataset {
   const messages = Array.isArray(data.messages) ? data.messages : [];
+  const csvSignals = parseCsvSignalRecords(data.csvSignals);
+  const csvCoveredDates = new Set(csvSignals.map((signal) => signal.tradeDate));
   const rawSignals = messages
-    .flatMap((message) => [...parseSignalMessage(message), ...parseRekapMessage(message)])
+    .flatMap((message) => [...parseSignalMessage(message), ...parseRekapMessage(message, csvCoveredDates)])
+    .concat(csvSignals)
     .sort(compareSignals);
   const uniqueSignals = dedupeSignals(rawSignals);
   const dates = rawSignals.map((signal) => signal.tradeDate).sort();
@@ -276,15 +294,17 @@ function parseSignalMessage(message: TelegramMessage): SignalEvent[] {
   });
 }
 
-function parseRekapMessage(message: TelegramMessage): SignalEvent[] {
+function parseRekapMessage(message: TelegramMessage, csvCoveredDates = new Set<string>()): SignalEvent[] {
   if (message.type !== "message" || !message.date) return [];
   const text = getMessageText(message).trim();
   if (!REKAP_START.test(text)) return [];
 
+  const datePart = message.date.slice(0, 10);
+  if (csvCoveredDates.has(datePart)) return [];
+
   const rowMatches = Array.from(text.matchAll(REKAP_ROW));
   if (!rowMatches.length) return [];
 
-  const datePart = message.date.slice(0, 10);
   const messageTime = message.date.slice(11, 19) || "00:00:00";
   const messageDate = message.date;
   const signalTime = text.match(REKAP_UPDATE_TIME)?.[1] || messageTime;
@@ -347,6 +367,68 @@ function parseRekapMessage(message: TelegramMessage): SignalEvent[] {
         rawMessageIds: [message.id],
       };
     });
+  });
+}
+
+function parseCsvSignalRecords(records?: CsvSignalRecord[]): SignalEvent[] {
+  if (!Array.isArray(records)) return [];
+
+  return records.flatMap((record, index) => {
+    const ticker = cleanRekapTicker(record.ticker || record.emiten || "");
+    const rawTime = String(record.time || "").trim();
+    const normalizedTime = rawTime.includes("T") ? rawTime : rawTime.replace(" ", "T");
+    const datePart = normalizedTime.slice(0, 10);
+    const signalTime = normalizedTime.slice(11, 19) || "00:00:00";
+    const price = parseNumber(String(record.price ?? "0"));
+    const score = parseNumber(String(record.score ?? "0"));
+    const code = Number(record.code ?? record.no ?? 0);
+    const rawSignalName = String(record.algo || record.signalName || (code ? REKAP_ALGO_MASTER[code - 1] : "") || "").trim();
+    const signalName = cleanSignalName(rawSignalName);
+
+    if (!ticker || !datePart || !signalName || !Number.isFinite(price) || price <= 0) return [];
+
+    const minutes = timeToMinutes(signalTime);
+    const id = Number(record.id || 880_000_000 + index);
+    const category = classifyCategory(signalName);
+    const starred = false;
+    const tags = classifyTags(signalName, starred);
+    tags.push("CSV");
+    const duplicateKey = [datePart, signalTime, ticker, signalName.toUpperCase(), price, score].join("|");
+    const rawText = [
+      "CSV SIGNAL",
+      `SOURCE ${record.sourceFile || "-"}`,
+      `${ticker} | ${signalName} | ${price} | ${score}`,
+    ].join("\n");
+
+    return [
+      {
+        id,
+        tradeDate: datePart,
+        messageDate: normalizedTime,
+        messageTime: signalTime,
+        signalDateTime: `${datePart}T${signalTime}`,
+        signalTime,
+        embeddedTime: true,
+        signalName,
+        rawSignalName,
+        category,
+        tags,
+        ticker,
+        price,
+        hasPrice: true,
+        score,
+        total: score,
+        starred,
+        session: classifySession(minutes),
+        minutes,
+        rawText,
+        sourceFrom: record.sourceFile || "CSV Export",
+        reactionCount: 0,
+        duplicateKey,
+        duplicateCount: 1,
+        rawMessageIds: [id],
+      },
+    ];
   });
 }
 
